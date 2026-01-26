@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dustin’s Pest Control | Lancaster, KY</title>
+  <meta name="description" content="Dustin’s Pest Control – Mosquito, Lawn, Turf & Ornamental services in Lancaster, KY and surrounding areas. Call or text for a quote." />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#0f1a2d;
+      --panel2:#0c1728;
+      --text:#e8eefc;
+      --muted:#b8c6e6;
+      --line:rgba(255,255,255,.12);
+      --accent:#38bdf8;
+      --good:#34d399;
+      --warn:#fbbf24;
+      --danger:#fb7185;
+      --shadow: 0 18px 45px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1080px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(1200px 800px at 20% -10%, rgba(56,189,248,.22), transparent 55%),
+        radial-gradient(900px 700px at 95% 10%, rgba(52,211,153,.18), transparent 60%),
+        radial-gradient(900px 800px at 60% 115%, rgba(251,113,133,.14), transparent 55%),
+        linear-gradient(180deg, #070b14 0%, #0b1220 70%, #070b14 100%);
+      color:var(--text);
+    }
+
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:18px}
+    header{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: blur(10px);
+      background: rgba(7,11,20,.70);
+      border-bottom:1px solid var(--line);
+    }
+    .bar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px;
+      max-width:var(--max); margin:0 auto; padding:12px 18px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      min-width: 220px;
+    }
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(56,189,248,.95), rgba(52,211,153,.9));
+      box-shadow: 0 10px 25px rgba(56,189,248,.18);
+      position:relative; overflow:hidden;
+    }
+    .logo:after{
+      content:"";
+      position:absolute; inset:-40%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 55%);
+      transform: rotate(25deg);
+    }
+    .brand h1{
+      font-size:14px; line-height:1.1; margin:0;
+      letter-spacing:.2px;
+    }
+    .brand .sub{
+      display:block; margin-top:2px;
+      font-size:12px; color:var(--muted);
+      letter-spacing:.2px;
+    }
+    nav{
+      display:flex; align-items:center; gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:8px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      text-decoration:none;
+      font-weight:650;
+      font-size:13px;
+      transition: transform .08s ease, background .12s ease, border-color .12s ease;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:hover{ background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.20); }
+    .btn:active{ transform: translateY(1px); }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(56,189,248,.95), rgba(52,211,153,.9));
+      border-color: transparent;
+      color:#071019;
+    }
+    .btn.primary:hover{ filter: brightness(1.02); }
+    .btn.danger{
+      background: rgba(251,113,133,.12);
+      border-color: rgba(251,113,133,.35);
+    }
+
+    .hero{
+      padding: 26px 0 10px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){
+      .hero-grid{ grid-template-columns:1fr; }
+      .brand{ min-width: unset; }
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .card-inner{ padding:18px; }
+
+    .kicker{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:12px; font-weight:700;
+      color: rgba(232,238,252,.92);
+      padding:6px 10px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.05);
+    }
+    .dot{
+      width:8px; height:8px; border-radius:99px;
+      background: var(--good);
+      box-shadow: 0 0 0 6px rgba(52,211,153,.12);
+    }
+    h2{
+      margin:12px 0 8px;
+      font-size:34px;
+      letter-spacing:-.6px;
+      line-height:1.08;
+    }
+    @media (max-width: 480px){
+      h2{ font-size:28px; }
+    }
+    p{
+      margin:0 0 12px;
+      color: var(--muted);
+      line-height:1.55;
+      font-size:14px;
+    }
+
+    .badges{
+      display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      font-size:12px; font-weight:700;
+      color: rgba(232,238,252,.92);
+    }
+    .badge svg{ opacity:.95 }
+
+    .mini{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+      margin-top:14px;
+    }
+    @media (max-width: 520px){
+      .mini{ grid-template-columns:1fr; }
+    }
+    .mini .item{
+      border:1px solid rgba(255,255,255,.14);
+      border-radius: 14px;
+      background: rgba(7,11,20,.45);
+      padding:12px;
+    }
+    .mini .label{ font-size:12px; color: var(--muted); margin-bottom:6px; }
+    .mini .value{ font-size:14px; font-weight:800; color: var(--text); }
+
+    .quick{
+      display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;
+    }
+
+    .section{
+      padding: 12px 0 6px;
+    }
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    @media (max-width: 900px){ .grid3{ grid-template-columns:1fr; } }
+
+    .service{
+      border-radius: var(--radius);
+      background: rgba(7,11,20,.45);
+      border:1px solid rgba(255,255,255,.12);
+      padding:16px;
+      min-height: 120px;
+    }
+    .service h3{
+      margin:0 0 8px; font-size:16px; letter-spacing:-.2px;
+    }
+    .service ul{
+      margin:0; padding-left:18px;
+      color: var(--muted);
+      font-size:13px; line-height:1.5;
+    }
+
+    form{
+      display:grid;
+      gap:10px;
+    }
+    .row{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+    }
+    @media (max-width: 620px){ .row{ grid-template-columns:1fr; } }
+
+    label{
+      display:block;
+      font-size:12px; font-weight:800;
+      color: rgba(232,238,252,.92);
+      margin-bottom:6px;
+      letter-spacing:.2px;
+    }
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius: 12px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(7,11,20,.45);
+      color: var(--text);
+      outline:none;
+      font-size:14px;
+    }
+    textarea{ min-height: 96px; resize: vertical; }
+
+    .small{
+      font-size:12px; color: var(--muted);
+    }
+
+    footer{
+      margin-top:20px;
+      border-top:1px solid var(--line);
+      padding:16px 0 30px;
+      color: var(--muted);
+      font-size:12px;
+    }
+
+    .toast{
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      background: rgba(7,11,20,.92);
+      border:1px solid rgba(255,255,255,.16);
+      box-shadow: var(--shadow);
+      padding:10px 12px;
+      border-radius: 14px;
+      display:none;
+      max-width:min(520px, calc(100% - 24px));
+    }
+    .toast strong{ color: var(--text); }
+    .toast .muted{ color: var(--muted); font-size:12px; margin-top:4px; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="bar">
+      <div class="brand" aria-label="Brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Dustin’s Pest Control</h1>
+          <span class="sub">Lancaster, KY • Mosquito • Lawn • Turf & Ornamental</span>
+        </div>
+      </div>
+
+      <nav aria-label="Quick actions">
+        <a class="btn" href="#services">Services</a>
+        <a class="btn" href="#quote">Get Quote</a>
+        <a class="btn" href="sms:+18593256810?body=Hi%20Dustin%2C%20I%E2%80%99d%20like%20a%20quote%20for%20%5Bmosquito%2Flawn%5D%20at%20%5Baddress%5D." rel="nofollow">Text</a>
+        <a class="btn primary" href="tel:+18593256810" rel="nofollow">Call: (859) 325-6810</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="card">
+          <div class="card-inner">
+            <span class="kicker"><span class="dot"></span> Local service • Fast scheduling</span>
+            <h2>Outdoor pest & lawn services that show up and get it done.</h2>
+            <p>
+              Serving Lancaster, KY and surrounding areas with mosquito treatments and lawn/turf & ornamental applications.
+              Call or text and I’ll get you a quick quote.
+            </p>
+
+            <div class="badges" aria-label="Highlights">
+              <span class="badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4.5 8-12V6l-8-4-8 4v4c0 7.5 8 12 8 12z" stroke="currentColor" stroke-width="2"/></svg>
+                Reliable service
+              </span>
+              <span class="badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 7l-8 10-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Clear communication
+              </span>
+              <span class="badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/></svg>
+                Quick scheduling
+              </span>
+            </div>
+
+            <div class="mini" aria-label="Contact details">
+              <div class="item">
+                <div class="label">Phone</div>
+                <div class="value"><a href="tel:+18593256810">(859) 325-6810</a></div>
+              </div>
+              <div class="item">
+                <div class="label">Email</div>
+                <div class="value"><a href="mailto:mann.dustin@yahoo.com">mann.dustin@yahoo.com</a></div>
+              </div>
+            </div>
+
+            <div class="quick" aria-label="Primary actions">
+              <a class="btn primary" href="#quote">Request a Quote</a>
+              <a class="btn" href="sms:+18593256810?body=Hi%20Dustin%2C%20I%E2%80%99d%20like%20a%20quote%20for%20mosquito%20service%20at%20%5Baddress%5D." rel="nofollow">Text for Quote</a>
+              <a class="btn danger" href="mailto:mann.dustin@yahoo.com?subject=Quote%20Request%20-%20Dustin%27s%20Pest%20Control&body=Name%3A%0AAddress%3A%0APhone%3A%0AService%20needed%3A%0ADetails%3A%0A">Email Quote</a>
+            </div>
+
+            <p class="small" style="margin-top:10px;">
+              Tip: Save this page to your home screen so customers can text/call you in one tap.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <h3 style="margin:0 0 8px; font-size:18px;">Service Area</h3>
+            <p style="margin-bottom:10px;">
+              Lancaster, KY and nearby towns. If you’re outside the area, text your address and I’ll confirm availability.
+            </p>
+
+            <div class="service" style="margin-bottom:12px;">
+              <h3 style="margin-top:0;">Most Requested</h3>
+              <ul>
+                <li>Mosquito yard treatments</li>
+                <li>Perimeter outdoor pest treatments</li>
+                <li>Lawn & turf applications</li>
+                <li>Ornamental shrub treatments</li>
+              </ul>
+            </div>
+
+            <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Lancaster%2C%20KY" target="_blank" rel="noopener">
+              Open area map
+            </a>
+
+            <p class="small" style="margin-top:12px;">
+              If you want your logo on this page, upload it and I’ll drop it in properly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="card">
+        <div class="card-inner">
+          <h3 style="margin:0 0 10px; font-size:20px;">Services</h3>
+
+          <div class="grid3" role="list">
+            <div class="service" role="listitem">
+              <h3>Mosquito Service</h3>
+              <ul>
+                <li>Residential yard treatments</li>
+                <li>Focus on shrubs, shade lines, and harborage areas</li>
+                <li>Repeat options available during season</li>
+              </ul>
+            </div>
+
+            <div class="service" role="listitem">
+              <h3>Lawn & Turf</h3>
+              <ul>
+                <li>Weed control applications</li>
+                <li>Insect control where needed</li>
+                <li>Program options (spring–fall)</li>
+              </ul>
+            </div>
+
+            <div class="service" role="listitem">
+              <h3>Ornamental</h3>
+              <ul>
+                <li>Shrub & ornamental treatments</li>
+                <li>Targeted applications as needed</li>
+                <li>Protection for landscape plants</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="small" style="margin-top:12px;">
+            Note: This is a simple public-facing site page. Your internal “Field Ops” app can be separate.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="quote" class="section">
+      <div class="card">
+        <div class="card-inner">
+          <h3 style="margin:0 0 10px; font-size:20px;">Request a Quote</h3>
+          <p>Fill this out. When you press submit, it will open an email to Dustin with your details filled in.</p>
+
+          <form id="quoteForm">
+            <div class="row">
+              <div>
+                <label for="name">Your Name</label>
+                <input id="name" name="name" placeholder="Full name" required />
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" inputmode="tel" placeholder="(859) ___-____" required />
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <label for="address">Service Address</label>
+                <input id="address" name="address" placeholder="Street, City, State" required />
+              </div>
+              <div>
+                <label for="service">Service Needed</label>
+                <select id="service" name="service" required>
+                  <option value="" selected disabled>Select one…</option>
+                  <option>Mosquito Service</option>
+                  <option>Lawn & Turf</option>
+                  <option>Ornamental Shrubs</option>
+                  <option>Outdoor Perimeter</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="details">Details</label>
+              <textarea id="details" name="details" placeholder="Example: ~1/2 acre, lots of shade, dogs in yard, best days/times, etc."></textarea>
+            </div>
+
+            <div class="row">
+              <a class="btn" id="textBtn" href="sms:+18593256810?body=Hi%20Dustin%2C%20I%E2%80%99d%20like%20a%20quote." rel="nofollow">Text Instead</a>
+              <button class="btn primary" type="submit">Submit Quote Request</button>
+            </div>
+
+            <div class="small">
+              By submitting, you’re opening your email app to send the request. No accounts or logins required.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="wrap" style="padding-left:0; padding-right:0;">
+      <div>
+        <strong style="color:var(--text);">Dustin’s Pest Control</strong> • Lancaster, KY •
+        <a href="tel:+18593256810">(859) 325-6810</a> •
+        <a href="mailto:mann.dustin@yahoo.com">mann.dustin@yahoo.com</a>
+      </div>
+      <div style="margin-top:6px;">
+        © <span id="year"></span> Dustin’s Pest Control. All rights reserved.
+      </div>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <strong id="toastTitle">Done</strong>
+    <div class="muted" id="toastMsg"></div>
+  </div>
+
+  <script>
+    (function(){
+      const YEAR = document.getElementById('year');
+      YEAR.textContent = new Date().getFullYear();
+
+      const form = document.getElementById('quoteForm');
+      const textBtn = document.getElementById('textBtn');
+
+      const toast = document.getElementById('toast');
+      const toastTitle = document.getElementById('toastTitle');
+      const toastMsg = document.getElementById('toastMsg');
+      let toastTimer = null;
+
+      function showToast(title, msg){
+        toastTitle.textContent = title;
+        toastMsg.textContent = msg || '';
+        toast.style.display = 'block';
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(()=> toast.style.display='none', 2600);
+      }
+
+      function enc(s){ return encodeURIComponent(s || ''); }
+
+      function updateTextLink(){
+        const name = document.getElementById('name').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const address = document.getElementById('address').value.trim();
+        const service = document.getElementById('service').value;
+        const details = document.getElementById('details').value.trim();
+
+        const msg =
+`Hi Dustin, I’d like a quote.
+Name: ${name || '[your name]'}
+Phone: ${phone || '[your phone]'}
+Address: ${address || '[service address]'}
+Service: ${service || '[service]'}
+Details: ${details || ''}`.trim();
+
+        textBtn.href = "sms:+18593256810?body=" + enc(msg);
+      }
+
+      ['name','phone','address','service','details'].forEach(id=>{
+        document.getElementById(id).addEventListener('input', updateTextLink);
+        document.getElementById(id).addEventListener('change', updateTextLink);
+      });
+
+      updateTextLink();
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const address = document.getElementById('address').value.trim();
+        const service = document.getElementById('service').value;
+        const details = document.getElementById('details').value.trim();
+
+        if(!name || !phone || !address || !service){
+          showToast("Missing info", "Please fill name, phone, address, and service.");
+          return;
+        }
+
+        const subject = `Quote Request - ${service}`;
+        const body =
+`Quote Request
+
+Name: ${name}
+Phone: ${phone}
+Address: ${address}
+Service: ${service}
+
+Details:
+${details || '(none)'}
+`;
+
+        const mailto = `mailto:mann.dustin@yahoo.com?subject=${enc(subject)}&body=${enc(body)}`;
+
+        showToast("Opening email…", "Send it to finish the request.");
+        window.location.href = mailto;
+      });
+    })();
+  </script>
+</body>
+</html>
