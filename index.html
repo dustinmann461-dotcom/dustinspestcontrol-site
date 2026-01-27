@@ -1,0 +1,943 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b2a2c" />
+  <title>Dustin’s Pest Control LLC | Outdoor Yard Pest Control (KY)</title>
+  <meta name="description" content="Outdoor yard pest control across Central Kentucky. Tap a pest to learn what it is and what we do next. Fast booking by text. $49 new-customer mosquito special." />
+
+  <style>
+    :root{
+      --bg:#061018;
+      --panel:#0b1a25;
+      --panel2:#0e2231;
+      --text:#eaf2f7;
+      --muted:#a9b8c3;
+      --accent:#16a34a;
+      --accent2:#22c55e;
+      --warn:#f59e0b;
+      --danger:#ef4444;
+      --border:rgba(255,255,255,.10);
+      --shadow:0 16px 40px rgba(0,0,0,.35);
+      --radius:18px;
+      --radius2:22px;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 20% -10%, rgba(34,197,94,.18), transparent 60%),
+        radial-gradient(900px 600px at 90% 0%, rgba(245,158,11,.08), transparent 55%),
+        linear-gradient(180deg,#05202a,#061018 55%, #061018);
+    }
+    a{color:inherit}
+    img{max-width:100%; display:block}
+    .wrap{max-width:var(--max); margin:0 auto; padding:18px 16px 86px}
+
+    /* Top bar */
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:saturate(1.2) blur(10px);
+      background:linear-gradient(90deg, rgba(9,46,46,.88), rgba(10,24,28,.72));
+      border-bottom:1px solid var(--border);
+    }
+    .topbar-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:10px 16px;
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; min-width:180px;
+    }
+    .brand img{
+      height:40px; /* bigger logo */
+      width:auto;
+      filter:drop-shadow(0 8px 18px rgba(0,0,0,.35));
+    }
+    .nav{
+      display:flex; gap:8px; flex:1; justify-content:flex-end;
+      overflow:auto; -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+    }
+    .nav::-webkit-scrollbar{display:none}
+    .pill{
+      white-space:nowrap;
+      padding:9px 12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(6,16,24,.55);
+      color:var(--text);
+      text-decoration:none;
+      font-size:13px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      transition:.18s transform, .18s background, .18s border-color;
+    }
+    .pill:hover{transform:translateY(-1px); background:rgba(14,34,49,.65); border-color:rgba(255,255,255,.18)}
+    .dot{
+      width:8px; height:8px; border-radius:50%;
+      background:var(--accent2);
+      box-shadow:0 0 0 3px rgba(34,197,94,.18);
+    }
+
+    /* Sections + cards */
+    .hero{
+      margin-top:16px;
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    @media (max-width: 920px){
+      .hero{grid-template-columns:1fr}
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(11,26,37,.92), rgba(6,16,24,.88));
+      border:1px solid var(--border);
+      border-radius:var(--radius2);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .card.pad{padding:18px}
+    .kicker{
+      display:flex; gap:8px; flex-wrap:wrap;
+      font-size:12px; color:var(--muted);
+      margin-bottom:10px;
+    }
+    .tag{
+      border:1px solid var(--border);
+      background:rgba(14,34,49,.55);
+      padding:6px 10px;
+      border-radius:999px;
+    }
+    h1{
+      margin:0 0 8px;
+      font-size:36px;
+      line-height:1.08;
+      letter-spacing:-.02em;
+    }
+    @media (max-width:520px){ h1{font-size:30px} }
+    .lead{
+      margin:0 0 14px;
+      color:rgba(234,242,247,.86);
+      line-height:1.45;
+    }
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    .btn{
+      border:1px solid var(--border);
+      background:rgba(14,34,49,.60);
+      color:var(--text);
+      padding:11px 14px;
+      border-radius:14px;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+      cursor:pointer;
+      transition:.18s transform, .18s background, .18s border-color;
+      user-select:none;
+    }
+    .btn:hover{transform:translateY(-1px); border-color:rgba(255,255,255,.18); background:rgba(14,34,49,.72)}
+    .btn.primary{
+      background:linear-gradient(90deg, rgba(22,163,74,.95), rgba(34,197,94,.88));
+      border-color:rgba(34,197,94,.35);
+      color:#061018;
+    }
+    .btn.primary:hover{background:linear-gradient(90deg, rgba(34,197,94,.95), rgba(22,163,74,.88))}
+    .btn.special{
+      background:linear-gradient(90deg, rgba(245,158,11,.95), rgba(251,191,36,.88));
+      border-color:rgba(245,158,11,.35);
+      color:#061018;
+    }
+    .btn.special:hover{background:linear-gradient(90deg, rgba(251,191,36,.95), rgba(245,158,11,.88))}
+    .btn.ghost{
+      background:rgba(6,16,24,.35);
+    }
+    .mini{
+      font-size:12px; color:var(--muted);
+      margin-top:10px; line-height:1.35;
+    }
+
+    /* Right hero: quick panel */
+    .quick{
+      display:flex; flex-direction:column; gap:12px;
+      height:100%;
+    }
+    .quick .box{
+      border:1px solid var(--border);
+      background:rgba(14,34,49,.45);
+      border-radius:18px;
+      padding:14px;
+    }
+    .box h3{margin:0 0 6px; font-size:14px}
+    .box p{margin:0; color:rgba(234,242,247,.80); font-size:13px; line-height:1.35}
+    .row2{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+
+    /* Main image blocks */
+    .section{margin-top:16px}
+    .sectionTitle{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      margin:8px 0 10px;
+    }
+    .sectionTitle h2{margin:0; font-size:18px; letter-spacing:-.01em}
+    .sectionTitle .hint{color:var(--muted); font-size:12px}
+
+    .imgFrame{
+      border-top:1px solid rgba(255,255,255,.06);
+      background:radial-gradient(900px 500px at 20% 10%, rgba(34,197,94,.10), transparent 60%);
+      padding:14px;
+    }
+    .imgCard{
+      border:1px solid var(--border);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 16px 40px rgba(0,0,0,.25);
+      background:#07131b;
+    }
+
+    /* Tap-the-pest image overlay */
+    .tapWrap{
+      position:relative;
+      width:100%;
+      overflow:hidden;
+    }
+    .tapWrap img{width:100%; height:auto; display:block}
+    .hotspot{
+      position:absolute;
+      border-radius:16px;
+      border:1px solid rgba(34,197,94,.35);
+      background:rgba(34,197,94,.07);
+      box-shadow:0 0 0 0 rgba(34,197,94,.35);
+      cursor:pointer;
+      outline:none;
+      transition:.15s transform, .15s background, .15s border-color;
+      animation:pulse 2.3s ease-in-out infinite;
+    }
+    .hotspot:hover{transform:translateY(-1px) scale(1.01); background:rgba(34,197,94,.10); border-color:rgba(34,197,94,.55)}
+    @keyframes pulse{
+      0%{box-shadow:0 0 0 0 rgba(34,197,94,.25)}
+      70%{box-shadow:0 0 0 10px rgba(34,197,94,0)}
+      100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}
+    }
+    .hsLabel{
+      position:absolute;
+      left:10px; bottom:10px;
+      background:rgba(6,16,24,.72);
+      border:1px solid rgba(255,255,255,.14);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.02em;
+      color:rgba(234,242,247,.95);
+      pointer-events:none;
+    }
+    @media (max-width:520px){
+      .hsLabel{font-size:11px; padding:5px 8px}
+      .hotspot{border-radius:14px}
+    }
+
+    /* Side-scrolling pest details */
+    .scroller{
+      display:flex;
+      gap:12px;
+      overflow:auto;
+      padding:12px 10px 10px;
+      -webkit-overflow-scrolling:touch;
+      scroll-snap-type:x mandatory;
+    }
+    .scroller::-webkit-scrollbar{height:10px}
+    .scroller::-webkit-scrollbar-thumb{background:rgba(255,255,255,.10); border-radius:999px}
+    .pCard{
+      min-width:280px;
+      max-width:340px;
+      scroll-snap-align:start;
+      border:1px solid var(--border);
+      background:rgba(14,34,49,.50);
+      border-radius:18px;
+      padding:14px;
+      box-shadow:0 10px 25px rgba(0,0,0,.20);
+    }
+    .pTop{
+      display:flex; justify-content:space-between; gap:10px; align-items:flex-start;
+      margin-bottom:10px;
+    }
+    .pTop h3{margin:0; font-size:16px}
+    .chips{display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end}
+    .chip{
+      font-size:11px;
+      padding:5px 8px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(6,16,24,.35);
+      color:rgba(234,242,247,.82);
+      white-space:nowrap;
+    }
+    .pCard p{margin:0 0 10px; color:rgba(234,242,247,.82); font-size:13px; line-height:1.35}
+    .pCard .btn{padding:9px 11px; border-radius:12px; font-size:13px}
+
+    /* Deals */
+    .dealGrid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+    @media (max-width:920px){ .dealGrid{grid-template-columns:1fr} }
+
+    /* Compliance (present but not everywhere) */
+    .compliance{
+      display:flex; gap:12px; align-items:flex-start; flex-wrap:wrap;
+      padding:14px;
+      border-top:1px solid rgba(255,255,255,.06);
+    }
+    .badgeRow{
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+      color:rgba(234,242,247,.85);
+      font-size:12px;
+    }
+    .badgeRow img{height:26px; width:auto; opacity:.95}
+    .verify{
+      margin-left:auto;
+      display:flex; gap:10px; flex-wrap:wrap;
+    }
+
+    /* Sticky bottom CTA (single set of actions) */
+    .sticky{
+      position:fixed; left:0; right:0; bottom:0;
+      z-index:60;
+      padding:10px 10px calc(10px + env(safe-area-inset-bottom));
+      background:linear-gradient(180deg, rgba(6,16,24,0), rgba(6,16,24,.85) 35%, rgba(6,16,24,.92));
+      border-top:1px solid rgba(255,255,255,.06);
+      backdrop-filter:blur(10px) saturate(1.2);
+    }
+    .stickyInner{
+      max-width:var(--max);
+      margin:0 auto;
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    /* Modal */
+    .modalOverlay{
+      position:fixed; inset:0;
+      background:rgba(0,0,0,.55);
+      display:none;
+      align-items:flex-end;
+      justify-content:center;
+      z-index:80;
+      padding:14px;
+    }
+    .modal{
+      width:min(820px, 100%);
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.14);
+      background:linear-gradient(180deg, rgba(14,34,49,.96), rgba(6,16,24,.96));
+      box-shadow:0 20px 60px rgba(0,0,0,.55);
+      overflow:hidden;
+    }
+    .modalHead{
+      padding:14px 16px;
+      display:flex; justify-content:space-between; gap:12px; align-items:center;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .modalHead h3{margin:0; font-size:16px}
+    .xBtn{
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(6,16,24,.35);
+      color:var(--text);
+      padding:8px 10px;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:800;
+    }
+    .modalBody{padding:14px 16px}
+    .modalBody p{margin:0 0 12px; color:rgba(234,242,247,.86); line-height:1.45}
+    .bullets{margin:0; padding-left:18px; color:rgba(234,242,247,.82)}
+    .bullets li{margin:6px 0}
+    .modalFoot{
+      padding:12px 16px;
+      border-top:1px solid rgba(255,255,255,.08);
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
+    }
+
+    /* Small helpers */
+    .muted{color:var(--muted)}
+    .spacer{height:6px}
+  </style>
+</head>
+
+<body>
+
+  <!-- Sticky top bar -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <img src="file_00000000a858722f8ee2ba76f351c735.png" alt="Dustin’s Pest Control LLC logo" />
+      </div>
+
+      <nav class="nav" aria-label="Site navigation">
+        <a class="pill" href="#tap"><span class="dot"></span>Pests</a>
+        <a class="pill" href="#mosquito">Mosquito</a>
+        <a class="pill" href="#deals">Deals</a>
+        <a class="pill" href="#how">How it works</a>
+        <a class="pill" href="#quote">Get a quote</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="wrap">
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="card pad">
+        <div class="kicker">
+          <span class="tag">Outdoor yard pest control</span>
+          <span class="tag">Central Kentucky</span>
+          <span class="tag">Fast quotes by text</span>
+        </div>
+
+        <!-- IMPORTANT: this text is ABOVE the pest image section per your note -->
+        <h1>Tap a pest. See what it is. Get a plan.</h1>
+        <p class="lead">
+          We focus on the yard pests people actually deal with: <b>ants</b>, <b>fleas</b>, <b>ticks</b>, <b>mosquitoes</b>, and <b>outdoor spiders</b> — plus other lawn & ornamental pests.
+          Tap a pest below for quick info and next steps.
+        </p>
+
+        <div class="ctaRow">
+          <a class="btn primary" href="tel:+18593256810" aria-label="Call Dustin’s Pest Control">(📞) Call Now</a>
+          <button class="btn" id="textBtnHero" type="button">(💬) Text for Fast Quote</button>
+          <a class="btn ghost" href="#tap">(🪲) Tap a Pest</a>
+          <a class="btn special" href="#deals">(⭐) $49 Mosquito Special</a>
+        </div>
+
+        <p class="mini">
+          No apps. No portals. One-page site. You can call or text. If you prefer, use the quote form and it opens your phone’s text/email (no server).
+        </p>
+      </div>
+
+      <aside class="card pad quick" aria-label="Quick info">
+        <div class="box">
+          <h3>Fastest way to book</h3>
+          <p>Text your <b>address</b> + <b>lot size</b> + what you’re seeing. We’ll confirm scope and line up the next available slot.</p>
+          <div class="row2">
+            <button class="btn" id="textBtnQuick" type="button">Text Details</button>
+            <a class="btn" href="#quote">Use Quote Form</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <h3>What you get</h3>
+          <p>Clear target areas + a plan that fits your yard and season. Simple scheduling and follow-ups.</p>
+          <div class="spacer"></div>
+          <p class="muted">Tip: Photos help a lot — trails, mounds, bites, shady “rest zones”, etc.</p>
+        </div>
+
+        <!-- KDA compliance (present, not repeated everywhere) -->
+        <div class="box">
+          <h3>License & scope</h3>
+          <p>
+            KY Category 03 (turf/lawn/ornamental). Treatments are performed <b>where the product label allows</b> for the site/target.
+            No indoor or structural pest control.
+          </p>
+          <div class="row2">
+            <a class="btn" target="_blank" rel="noopener" href="https://www.kyagr-apps.com/AgLicensing/Pesticides/Public/Search">
+              Verify License (KY AGR)
+            </a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- TAP A PEST (image-first request: use the “Outdoor ant, flea, tick & mosquito control” photo FIRST) -->
+    <section class="section card" id="tap">
+      <div class="imgFrame">
+        <div class="sectionTitle">
+          <h2>Tap a Pest (Details & Next Steps)</h2>
+          <div class="hint">Tap a tile on the image — or swipe the cards below →</div>
+        </div>
+
+        <!-- First image (your request): file_...a9a071... -->
+        <div class="imgCard" style="margin-bottom:14px">
+          <img src="file_00000000a9a071f8a81707679af703df.png" alt="Outdoor ant, flea, tick & mosquito control" />
+        </div>
+
+        <!-- Second image: the 6-tile “Common yard pests we handle” with clickable hotspots -->
+        <div class="imgCard">
+          <div class="tapWrap" role="group" aria-label="Common yard pests image with tappable pests">
+            <img id="pestImage" src="file_000000004f00722fb095e7dd41f316e5.png" alt="Common yard pests we handle: ants, fleas, ticks, mosquitoes, spiders, and more lawn & ornamental pests" />
+
+            <!-- Hotspot positions are % based (responsive). If you want them tighter/looser later, tell me and I’ll tune. -->
+            <!-- Row 1 -->
+            <button class="hotspot" data-pest="ants"    style="left:6.2%; top:24.5%; width:27.6%; height:17.5%;" aria-label="Ants"></button>
+            <button class="hotspot" data-pest="fleas"   style="left:36.2%; top:24.5%; width:27.6%; height:17.5%;" aria-label="Fleas"></button>
+            <button class="hotspot" data-pest="ticks"   style="left:66.2%; top:24.5%; width:27.6%; height:17.5%;" aria-label="Ticks"></button>
+
+            <!-- Row 2 -->
+            <button class="hotspot" data-pest="mosquitoes" style="left:6.2%; top:44.8%; width:27.6%; height:17.5%;" aria-label="Mosquitoes"></button>
+            <button class="hotspot" data-pest="spiders"    style="left:36.2%; top:44.8%; width:27.6%; height:17.5%;" aria-label="Spiders (Outdoor)"></button>
+            <button class="hotspot" data-pest="more"       style="left:66.2%; top:44.8%; width:27.6%; height:17.5%;" aria-label="More lawn and ornamental pests"></button>
+
+            <div class="hsLabel">Tap a tile for info</div>
+          </div>
+
+          <!-- Keep this section clean: no extra duplicate call/text/quote buttons here -->
+          <div class="compliance">
+            <div class="badgeRow">
+              <img src="file_00000000107871f59dc8001bf56aacef.png" alt="KY Licensed Category 03 badge" />
+              <span><b>KY Category 03</b> (turf/lawn/ornamental) • label-directed applications • records maintained</span>
+            </div>
+            <div class="verify">
+              <a class="btn" target="_blank" rel="noopener" href="https://www.kyagr-apps.com/AgLicensing/Pesticides/Public/Search">Verify License</a>
+              <a class="btn ghost" href="#quote">Get a Quote</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side-scrolling pest detail cards (your request) -->
+        <div class="sectionTitle" style="margin-top:14px">
+          <h2>Swipe for quick info</h2>
+          <div class="hint">Side-scroll → then tap “Details”</div>
+        </div>
+
+        <div class="scroller" aria-label="Side-scrolling pest information cards">
+          <div class="pCard">
+            <div class="pTop">
+              <h3>Ants</h3>
+              <div class="chips">
+                <span class="chip">Trails</span><span class="chip">Mounds</span><span class="chip">Edges</span>
+              </div>
+            </div>
+            <p>Common signs: trails along sidewalks/patios, mounds in turf, activity around mulch edges.</p>
+            <button class="btn" data-open="ants" type="button">Tap for info →</button>
+          </div>
+
+          <div class="pCard">
+            <div class="pTop">
+              <h3>Fleas</h3>
+              <div class="chips">
+                <span class="chip">Pets</span><span class="chip">Shade</span><span class="chip">Hot spots</span>
+              </div>
+            </div>
+            <p>Outdoor hotspots: shaded turf, under decks, pet rest zones. We target the worst areas first.</p>
+            <button class="btn" data-open="fleas" type="button">Tap for info →</button>
+          </div>
+
+          <div class="pCard">
+            <div class="pTop">
+              <h3>Ticks</h3>
+              <div class="chips">
+                <span class="chip">Woods line</span><span class="chip">Brush</span><span class="chip">Fence line</span>
+              </div>
+            </div>
+            <p>Best results come from focusing on transition zones: brush edges, tall grass, leaf litter.</p>
+            <button class="btn" data-open="ticks" type="button">Tap for info →</button>
+          </div>
+
+          <div class="pCard">
+            <div class="pTop">
+              <h3>Mosquitoes</h3>
+              <div class="chips">
+                <span class="chip">Shade</span><span class="chip">Rest zones</span><span class="chip">Water</span>
+              </div>
+            </div>
+            <p>We focus on shaded “rest zones” and the spots that produce the most bites.</p>
+            <button class="btn" data-open="mosquitoes" type="button">Tap for info →</button>
+          </div>
+
+          <div class="pCard">
+            <div class="pTop">
+              <h3>Outdoor Spiders</h3>
+              <div class="chips">
+                <span class="chip">Eaves</span><span class="chip">Porches</span><span class="chip">Sheds</span>
+              </div>
+            </div>
+            <p>We reduce activity and re-webbing pressure around porches, eaves, and outdoor structures.</p>
+            <button class="btn" data-open="spiders" type="button">Tap for info →</button>
+          </div>
+
+          <div class="pCard">
+            <div class="pTop">
+              <h3>More lawn & ornamental pests</h3>
+              <div class="chips">
+                <span class="chip">Grubs</span><span class="chip">Bagworms</span><span class="chip">Mites</span>
+              </div>
+            </div>
+            <p>Other common outdoor problems: grubs, chinch bugs, aphids, mites, scale, bagworms, caterpillars.</p>
+            <button class="btn" data-open="more" type="button">Tap for info →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOSQUITO SECTION -->
+    <section class="section card" id="mosquito">
+      <div class="imgFrame">
+        <div class="sectionTitle">
+          <h2>Mosquito Yard Treatments</h2>
+          <div class="hint">Comfort-focused, property-specific approach</div>
+        </div>
+
+        <div class="imgCard">
+          <!-- Your mosquito hero image -->
+          <img src="file_0000000047fc71fda743f178cd8b41b0.png" alt="Fast and effective mosquito control" />
+        </div>
+
+        <div class="card pad" style="margin-top:12px; background:rgba(14,34,49,.45)">
+          <div class="sectionTitle" style="margin:0 0 8px">
+            <h2 style="font-size:16px; margin:0">Best results come from two things</h2>
+            <div class="hint">Simple, practical, and effective</div>
+          </div>
+          <ul class="bullets">
+            <li><b>Targeting the right zones</b> (shade + resting areas, not just open grass).</li>
+            <li><b>Reducing breeding sites</b> (standing water, clogged gutters, containers).</li>
+          </ul>
+          <p class="mini" style="margin-top:10px">
+            Tip: Before service, dump standing water, flip buckets/toys, and clear gutters if possible.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEALS -->
+    <section class="section card" id="deals">
+      <div class="imgFrame">
+        <div class="sectionTitle">
+          <h2>Seasonal Deals & Quick Starts</h2>
+          <div class="hint">Promote your $49 special clearly</div>
+        </div>
+
+        <div class="dealGrid">
+          <div class="imgCard">
+            <img src="file_00000000a64071f8a549eb904d763c56.png" alt="$49 mosquito yard treatment new customer deal" />
+          </div>
+
+          <div class="card pad" style="background:rgba(14,34,49,.45)">
+            <h2 style="margin:0 0 8px; font-size:18px">$49 New-Customer Mosquito Special</h2>
+            <p class="lead" style="margin:0 0 10px">
+              Quick start for new customers. Text your address + lot size and we’ll confirm coverage and schedule.
+            </p>
+            <div class="ctaRow">
+              <button class="btn special" id="claim49" type="button">(⭐) Claim the $49 Special</button>
+              <a class="btn primary" href="tel:+18593256810">(📞) Call Now</a>
+              <button class="btn" id="textBtnDeal" type="button">(💬) Text to Book</button>
+            </div>
+            <p class="mini">
+              Final scope and application are always <b>label-directed</b> for the site/target (Category 03 turf/lawn/ornamental).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section card" id="how">
+      <div class="imgFrame">
+        <div class="sectionTitle">
+          <h2>How it works</h2>
+          <div class="hint">Simple, fast, and clean</div>
+        </div>
+
+        <div class="dealGrid">
+          <div class="card pad" style="background:rgba(14,34,49,.45)">
+            <h2 style="margin:0 0 6px; font-size:16px">1) Tell us what’s going on</h2>
+            <p class="lead" style="margin:0">
+              Text your address (or ZIP), lot size, and what pest you’re seeing. Photos help.
+            </p>
+          </div>
+
+          <div class="card pad" style="background:rgba(14,34,49,.45)">
+            <h2 style="margin:0 0 6px; font-size:16px">2) We confirm the plan</h2>
+            <p class="lead" style="margin:0">
+              We confirm target areas + timing based on your yard and season, then schedule you.
+            </p>
+          </div>
+        </div>
+
+        <div class="card pad" style="margin-top:12px; background:rgba(14,34,49,.45)">
+          <div class="sectionTitle" style="margin:0 0 8px">
+            <h2 style="font-size:16px; margin:0">License verification</h2>
+            <div class="hint">One clear place (not repeated everywhere)</div>
+          </div>
+          <p class="lead" style="margin:0 0 10px">
+            You can verify Kentucky pesticide licensing using the KY AGR public search tool.
+          </p>
+          <div class="ctaRow">
+            <a class="btn" target="_blank" rel="noopener" href="https://www.kyagr-apps.com/AgLicensing/Pesticides/Public/Search">Verify License (KY AGR)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="section card" id="quote">
+      <div class="imgFrame">
+        <div class="sectionTitle">
+          <h2>Request a quote</h2>
+          <div class="hint">Opens your phone’s text/email • no server</div>
+        </div>
+
+        <div class="card pad" style="background:rgba(14,34,49,.45)">
+          <form id="quoteForm">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px">
+              <div>
+                <label class="muted" for="name" style="font-size:12px; display:block; margin:0 0 6px">Name</label>
+                <input id="name" name="name" autocomplete="name"
+                  style="width:100%; padding:12px 12px; border-radius:14px; border:1px solid rgba(255,255,255,.12); background:rgba(6,16,24,.45); color:var(--text)"
+                  placeholder="Your name" />
+              </div>
+              <div>
+                <label class="muted" for="phone" style="font-size:12px; display:block; margin:0 0 6px">Phone</label>
+                <input id="phone" name="phone" autocomplete="tel"
+                  style="width:100%; padding:12px 12px; border-radius:14px; border:1px solid rgba(255,255,255,.12); background:rgba(6,16,24,.45); color:var(--text)"
+                  placeholder="(###) ###-####" />
+              </div>
+              <div style="grid-column:1/-1">
+                <label class="muted" for="address" style="font-size:12px; display:block; margin:0 0 6px">Service address or ZIP</label>
+                <input id="address" name="address" autocomplete="street-address"
+                  style="width:100%; padding:12px 12px; border-radius:14px; border:1px solid rgba(255,255,255,.12); background:rgba(6,16,24,.45); color:var(--text)"
+                  placeholder="Address (or ZIP) for service" />
+              </div>
+              <div>
+                <label class="muted" for="lot" style="font-size:12px; display:block; margin:0 0 6px">Lot size (approx.)</label>
+                <input id="lot" name="lot"
+                  style="width:100%; padding:12px 12px; border-radius:14px; border:1px solid rgba(255,255,255,.12); background:rgba(6,16,24,.45); color:var(--text)"
+                  placeholder="1/4 acre, 1/2 acre, etc." />
+              </div>
+              <div>
+                <label class="muted" for="pest" style="font-size:12px; display:block; margin:0 0 6px">Pest</label>
+                <select id="pest" name="pest"
+                  style="width:100%; padding:12px 12px; border-radius:14px; border:1px solid rgba(255,255,255,.12); background:rgba(6,16,24,.45); color:var(--text)">
+                  <option>Ants</option>
+                  <option>Fleas</option>
+                  <option>Ticks</option>
+                  <option>Mosquitoes</option>
+                  <option>Outdoor Spiders</option>
+                  <option>More lawn & ornamental pests</option>
+                </select>
+              </div>
+              <div style="grid-column:1/-1">
+                <label class="muted" for="notes" style="font-size:12px; display:block; margin:0 0 6px">Notes</label>
+                <textarea id="notes" name="notes" rows="4"
+                  style="width:100%; padding:12px 12px; border-radius:14px; border:1px solid rgba(255,255,255,.12); background:rgba(6,16,24,.45); color:var(--text); resize:vertical"
+                  placeholder="Where are you seeing activity? (front shrubs, back fence line, under deck, etc.)"></textarea>
+              </div>
+            </div>
+
+            <div class="ctaRow" style="margin-top:12px">
+              <button class="btn primary" type="submit">(💬) Text this request</button>
+              <button class="btn" id="emailBtn" type="button">(✉️) Email this request</button>
+              <a class="btn ghost" href="tel:+18593256810">(📞) Call instead</a>
+            </div>
+
+            <p class="mini">
+              Compliance note: Outdoor applications are performed where the product label allows for the site/target (KY Category 03 turf/lawn/ornamental). No indoor/structural pest control.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Sticky bottom actions (single set) -->
+  <div class="sticky" role="region" aria-label="Quick actions">
+    <div class="stickyInner">
+      <a class="btn primary" href="tel:+18593256810">(📞) Call</a>
+      <button class="btn" id="textBtnSticky" type="button">(💬) Text</button>
+      <a class="btn special" href="#deals">(⭐) $49 Special</a>
+      <a class="btn ghost" href="#quote">(✅) Quote</a>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modalOverlay" id="modalOverlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modalHead">
+        <h3 id="modalTitle">Pest details</h3>
+        <button class="xBtn" id="closeModal" type="button">Close ✕</button>
+      </div>
+      <div class="modalBody" id="modalBody"></div>
+      <div class="modalFoot">
+        <a class="btn primary" href="tel:+18593256810">(📞) Call Now</a>
+        <button class="btn" id="textBtnModal" type="button">(💬) Text for Quote</button>
+        <a class="btn ghost" href="#quote">(✅) Use Quote Form</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const PHONE = "+18593256810";
+    const TEXT_TO = "+18593256810";
+
+    // Pest content (expandable list includes additional lawn/ornamental pests)
+    const PESTS = {
+      ants: {
+        title: "Ants (Outdoor)",
+        desc: "Common signs: trails along sidewalks/patios, mounds in turf, and activity around mulch edges.",
+        bullets: [
+          "What to look for: trails, mounds, and recurring activity zones.",
+          "Best targets: edges, cracks/crevices outdoors, and problem turf areas.",
+          "Helpful info to text: where you see trails + any mound locations."
+        ]
+      },
+      fleas: {
+        title: "Fleas (Outdoor hotspots)",
+        desc: "Fleas often build up in shaded turf and pet rest zones — under decks, around kennels, and along fence lines.",
+        bullets: [
+          "What to look for: bites after being in the yard, pet scratching, shady hot spots.",
+          "Best targets: shaded turf, under decks, pet rest areas.",
+          "Helpful info to text: where pets spend time + where you’re getting bit."
+        ]
+      },
+      ticks: {
+        title: "Ticks",
+        desc: "Ticks thrive in transition areas: woods edges, brush lines, tall grass, and leaf litter.",
+        bullets: [
+          "What to look for: ticks on pets/people after yard time; tall grass/brush nearby.",
+          "Best targets: fence lines, brush edges, tall grass transitions.",
+          "Helpful info to text: property edge type (woods/field) + where you found ticks."
+        ]
+      },
+      mosquitoes: {
+        title: "Mosquitoes",
+        desc: "Best results come from targeting shaded resting zones and reducing breeding sites (standing water).",
+        bullets: [
+          "What to look for: where you’re getting hit most (porch, back patio, shaded corners).",
+          "Best targets: shrubs, shaded edges, under decks, near water sources (label-directed).",
+          "Helpful info to text: lot size + where you spend time outside."
+        ]
+      },
+      spiders: {
+        title: "Outdoor Spiders",
+        desc: "We focus on reducing activity and re-webbing pressure around porches, eaves, sheds, and outdoor structures.",
+        bullets: [
+          "What to look for: heavy webbing around lights, corners, eaves.",
+          "Best targets: eaves/edges, porch corners, sheds/garages (exterior areas).",
+          "Helpful info to text: where webs build up fastest."
+        ]
+      },
+      more: {
+        title: "More lawn & ornamental pests",
+        desc: "Common outdoor lawn/landscape issues we can discuss based on what you’re seeing.",
+        bullets: [
+          "Turf: grubs, chinch bugs, sod webworms, armyworms (seasonal).",
+          "Ornamentals: aphids, mites, scale, bagworms, caterpillars.",
+          "Other: nuisance beetles in turf, landscape invaders (outdoor).",
+          "Text photos — it speeds up identification and planning."
+        ]
+      }
+    };
+
+    function buildMessage(prefillPest){
+      const name = (document.getElementById("name")?.value || "").trim();
+      const phone = (document.getElementById("phone")?.value || "").trim();
+      const address = (document.getElementById("address")?.value || "").trim();
+      const lot = (document.getElementById("lot")?.value || "").trim();
+      const pest = prefillPest || (document.getElementById("pest")?.value || "").trim();
+      const notes = (document.getElementById("notes")?.value || "").trim();
+
+      const lines = [
+        "Dustin’s Pest Control – Quote Request",
+        "",
+        pest ? `Pest: ${pest}` : "",
+        address ? `Address/ZIP: ${address}` : "",
+        lot ? `Lot size: ${lot}` : "",
+        name ? `Name: ${name}` : "",
+        phone ? `Phone: ${phone}` : "",
+        notes ? `Notes: ${notes}` : "",
+      ].filter(Boolean);
+
+      return lines.join("\n");
+    }
+
+    function openText(prefillPest){
+      const msg = encodeURIComponent(buildMessage(prefillPest));
+      // SMS scheme varies by device; this one works well on Android.
+      window.location.href = `sms:${TEXT_TO}?body=${msg}`;
+    }
+
+    function openEmail(){
+      const subject = encodeURIComponent("Dustin’s Pest Control – Quote Request");
+      const body = encodeURIComponent(buildMessage());
+      // If you prefer a specific email address here later, tell me and I’ll set it.
+      window.location.href = `mailto:?subject=${subject}&body=${body}`;
+    }
+
+    // Buttons
+    document.getElementById("textBtnHero").addEventListener("click", () => openText());
+    document.getElementById("textBtnQuick").addEventListener("click", () => openText());
+    document.getElementById("textBtnDeal").addEventListener("click", () => openText("Mosquitoes – $49 New Customer Special"));
+    document.getElementById("textBtnSticky").addEventListener("click", () => openText());
+    document.getElementById("emailBtn").addEventListener("click", openEmail);
+    document.getElementById("claim49").addEventListener("click", () => openText("Mosquitoes – $49 New Customer Special"));
+
+    // Quote form submit => text
+    document.getElementById("quoteForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      openText();
+    });
+
+    // Modal logic
+    const overlay = document.getElementById("modalOverlay");
+    const modalBody = document.getElementById("modalBody");
+    const modalTitle = document.getElementById("modalTitle");
+    const closeBtn = document.getElementById("closeModal");
+    const modalTextBtn = document.getElementById("textBtnModal");
+
+    function showPest(key){
+      const p = PESTS[key] || PESTS.more;
+      modalTitle.textContent = p.title;
+      modalBody.innerHTML = `
+        <p>${p.desc}</p>
+        <ul class="bullets">
+          ${p.bullets.map(x => `<li>${x}</li>`).join("")}
+        </ul>
+        <p class="mini" style="margin-top:10px">
+          Want the fastest quote? Text your <b>address</b> + <b>lot size</b> + what you’re seeing.
+        </p>
+      `;
+      modalTextBtn.onclick = () => openText(p.title);
+      overlay.style.display = "flex";
+      overlay.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+    function hideModal(){
+      overlay.style.display = "none";
+      overlay.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    closeBtn.addEventListener("click", hideModal);
+    overlay.addEventListener("click", (e) => {
+      if(e.target === overlay) hideModal();
+    });
+    window.addEventListener("keydown", (e) => {
+      if(e.key === "Escape") hideModal();
+    });
+
+    // Hotspots on the image
+    document.querySelectorAll(".hotspot").forEach(btn => {
+      btn.addEventListener("click", () => showPest(btn.dataset.pest));
+    });
+
+    // Side-scrolling cards "Tap for info"
+    document.querySelectorAll("[data-open]").forEach(btn => {
+      btn.addEventListener("click", () => showPest(btn.dataset.open));
+    });
+  </script>
+
+</body>
+</html>
