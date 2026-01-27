@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Dustin’s Pest Control LLC | Central Kentucky | KY Category 03 (Turf/Lawn/Ornamental)</title>
+<meta name="description" content="Outdoor yard pest control in Central Kentucky. KY Category 03 (turf/lawn/ornamental). Mosquito, tick, flea, ant, and lawn/turf/ornamental pests—label-directed and records maintained. Text for fast quotes." />
+
+<style>
+:root{
+  --bg:#061018;
+  --panel:#0b1a25;
+  --panel2:#0e2231;
+  --text:#eaf2f7;
+  --muted:#a9b8c3;
+  --accent:#16a34a;
+  --accent2:#22c55e;
+  --warn:#f59e0b;
+  --border:rgba(255,255,255,.12);
+  --shadow:0 18px 60px rgba(0,0,0,.45);
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:linear-gradient(180deg,#05202a,#061018);
+  color:var(--text);
+}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:7px 10px;border:1px solid var(--border);border-radius:999px;background:rgba(0,0,0,.18);color:var(--muted);font-size:12px}
+.dot{width:8px;height:8px;border-radius:999px;background:var(--accent2);box-shadow:0 0 0 3px rgba(34,197,94,.18)}
+.btn{
+  appearance:none;border:1px solid var(--border);
+  background:rgba(255,255,255,.06);color:var(--text);
+  border-radius:999px;padding:12px 14px;font-weight:800;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  text-decoration:none;cursor:pointer;transition:.15s transform,.15s filter,.15s background;
+  white-space:nowrap;
+}
+.btn:hover{filter:brightness(1.06)}
+.btn:active{transform:translateY(1px)}
+.btn.primary{background:linear-gradient(90deg,#16a34a,#22c55e);border-color:rgba(0,0,0,.0);color:#04100a}
+.btn.ghost{background:rgba(255,255,255,.04)}
+.btn.warn{background:linear-gradient(90deg,#f59e0b,#fbbf24);border-color:rgba(0,0,0,0);color:#201202}
+.btn.small{padding:9px 12px;font-size:13px;font-weight:800}
+.btn.block{width:100%}
+
+/* Header */
+header{
+  position:sticky;top:0;z-index:30;
+  background:linear-gradient(90deg,#08312f,#0b3d2c);
+  border-bottom:1px solid rgba(255,255,255,.10);
+  backdrop-filter:saturate(130%) blur(6px);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:12px 0;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{
+  height:58px;
+  width:auto;
+  display:block;
+  filter:drop-shadow(0 10px 30px rgba(0,0,0,.35));
+}
+.brand .mini{display:flex;flex-direction:column;line-height:1.05}
+.brand .mini b{font-size:14px}
+.brand .mini span{font-size:12px;color:rgba(255,255,255,.75)}
+.menu{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.menu a{
+  text-decoration:none;
+  padding:9px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.10);
+  background:rgba(0,0,0,.12);
+  color:rgba(255,255,255,.92);
+  font-weight:800;font-size:13px;
+}
+.menu a:hover{background:rgba(255,255,255,.06)}
+.menu a.active{border-color:rgba(34,197,94,.45);box-shadow:0 0 0 3px rgba(34,197,94,.12) inset}
+
+/* Hero */
+.hero{padding:18px 0}
+.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:14px}
+.card{
+  background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.heroCard{padding:18px}
+.kickers{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+h1{margin:0 0 8px;font-size:34px}
+.sub{margin:0 0 14px;color:rgba(255,255,255,.78);font-weight:650;line-height:1.45}
+.ctaRow{display:flex;gap:10px;flex-wrap:wrap}
+.licenseStrip{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.licenseStrip img{height:34px}
+.legalBox{
+  margin-top:10px;
+  padding:12px;border-radius:16px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(0,0,0,.18);
+  color:rgba(255,255,255,.74);
+  font-size:12.5px;line-height:1.35
+}
+.heroRight{padding:14px;display:flex;flex-direction:column;gap:12px}
+.promo{
+  padding:14px;
+  background:linear-gradient(180deg,rgba(245,158,11,.18),rgba(255,255,255,.03));
+  border:1px solid rgba(245,158,11,.35);
+  border-radius:16px;
+}
+.promo img{width:100%;border-radius:14px;margin-top:10px}
+
+/* Section */
+section{padding:18px 0}
+.sectionHead{display:flex;justify-content:space-between;gap:12px}
+.sectionHead h2{margin:0;font-size:22px}
+.sectionHead .hint{margin:0;color:rgba(255,255,255,.66);font-size:13px}
+
+/* Hotspot */
+.hotspot{position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.12)}
+.hotspot img{width:100%;display:block}
+.hsBtn{position:absolute;border-radius:14px;background:rgba(34,197,94,.0);border:2px solid rgba(34,197,94,.0)}
+.hsBtn:hover{border-color:rgba(34,197,94,.7);background:rgba(34,197,94,.15)}
+.hs-ant{left:4%;top:18%;width:28%;height:24%}
+.hs-flea{left:36%;top:18%;width:28%;height:24%}
+.hs-tick{left:68%;top:18%;width:28%;height:24%}
+.hs-mosq{left:4%;top:46%;width:28%;height:24%}
+.hs-spider{left:36%;top:46%;width:28%;height:24%}
+.hs-more{left:68%;top:46%;width:28%;height:24%}
+
+/* Scroller */
+.scroller{display:flex;gap:12px;overflow-x:auto;padding-bottom:10px}
+.pestCard{
+  min-width:260px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(0,0,0,.18);
+  padding:14px;
+}
+
+/* Services */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.serviceCard{padding:16px}
+
+/* Footer */
+footer{padding:16px 0 80px;color:rgba(255,255,255,.7);font-size:12.5px}
+
+/* Sticky bar */
+.stickyBar{
+  position:fixed;left:0;right:0;bottom:0;z-index:40;
+  background:rgba(6,16,24,.95);
+  border-top:1px solid rgba(255,255,255,.12);
+}
+.stickyInner{display:flex;gap:10px;padding:10px}
+
+/* Modal */
+.modalBack{
+  position:fixed;inset:0;display:none;
+  background:rgba(0,0,0,.7);
+  align-items:center;justify-content:center;
+}
+.modal{background:#0e2231;border-radius:18px;padding:14px;width:90%;max-width:600px}
+.iconBtn{background:none;border:1px solid var(--border);color:white;border-radius:10px;padding:6px 10px}
+
+@media(max-width:900px){
+  .heroGrid{grid-template-columns:1fr}
+  .menu{display:none}
+  .grid2{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">
+        <img src="file_00000000a858722f8ee2ba76f351c735.png" alt="Dustin’s Pest Control LLC">
+        <div class="mini">
+          <b>Dustin’s Pest Control LLC</b>
+          <span>Central Kentucky • Outdoor Yard Services</span>
+        </div>
+      </div>
+      <nav class="menu">
+        <a class="active" href="#pests">Pests</a>
+        <a href="#mosquito">Mosquito</a>
+        <a href="#how">How it works</a>
+        <a href="#deal">$49 Special</a>
+        <a href="#quote">Get Quote</a>
+      </nav>
+      <a class="btn primary small" href="#quote">Get Quote</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="hero">
+  <div class="heroGrid">
+    <div class="card heroCard">
+      <div class="kickers">
+        <span class="pill"><span class="dot"></span>KY Category 03 Licensed</span>
+        <span class="pill">Label-directed</span>
+        <span class="pill">Records maintained</span>
+      </div>
+
+      <h1>Tap a pest. See what it is. Get a plan.</h1>
+      <p class="sub">
+        Outdoor yard pest control across Central Kentucky — mosquitoes, ticks, fleas, ants, spiders and more lawn & ornamental pests.
+      </p>
+
+      <div class="ctaRow">
+        <a class="btn primary" href="tel:+18593256810">Call (859) 325-6810</a>
+        <a class="btn ghost" href="#" onclick="openSMS()">Text for Fast Quote</a>
+        <a class="btn ghost" href="#pests">Tap a Pest</a>
+      </div>
+
+      <div class="licenseStrip">
+        <img src="file_00000000107871f59dc8001bf56aacef.png" alt="KY Category 03 Badge">
+        <a class="btn small" href="https://www.kyagr-apps.com/AgLicensing/Pesticides/Public/Company/48777" target="_blank">
+          Verify KDA License
+        </a>
+      </div>
+
+      <div class="legalBox">
+        KY Category 03 (Turf/Lawn/Ornamental) • Outdoor treatments only • No indoor or structural pest control.
+        Services performed per product label and site conditions. Service area: Lancaster + Central Kentucky routes.
+      </div>
+    </div>
+
+    <div class="card heroRight" id="deal">
+      <div class="promo">
+        <h3>$49 New Customer Special</h3>
+        <p>First mosquito yard treatment up to ¼ acre. Text your address + lot size to confirm eligibility.</p>
+        <a class="btn warn block" href="#quote">$49 Special</a>
+        <img src="file_00000000ef6471f59f5a1d8edafc1c86.png" alt="Mosquito special">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pests">
+  <div class="sectionHead">
+    <h2>Common Yard Pests We Handle</h2>
+    <p class="hint">Tap a pest for details</p>
+  </div>
+
+  <div class="hotspot">
+    <img src="file_00000000e00c71fdae272f36c8a03567.png" alt="Tap a pest image">
+    <button class="hsBtn hs-ant" onclick="showPest('Ants')"></button>
+    <button class="hsBtn hs-flea" onclick="showPest('Fleas')"></button>
+    <button class="hsBtn hs-tick" onclick="showPest('Ticks')"></button>
+    <button class="hsBtn hs-mosq" onclick="showPest('Mosquitoes')"></button>
+    <button class="hsBtn hs-spider" onclick="showPest('Spiders')"></button>
+    <button class="hsBtn hs-more" onclick="showPest('More Pests')"></button>
+  </div>
+
+  <div style="height:12px"></div>
+
+  <div class="scroller">
+    <div class="pestCard"><h3>Ants</h3><p>Trails, patios, mulch edges, mound zones.</p><a class="btn block" onclick="showPest('Ants')">Tap for Info</a></div>
+    <div class="pestCard"><h3>Fleas</h3><p>Shaded turf, pet zones, under decks.</p><a class="btn block" onclick="showPest('Fleas')">Tap for Info</a></div>
+    <div class="pestCard"><h3>Ticks</h3><p>Fence lines, woods edges, tall grass.</p><a class="btn block" onclick="showPest('Ticks')">Tap for Info</a></div>
+    <div class="pestCard"><h3>Mosquitoes</h3><p>Resting zones, shaded shrubs, water sources.</p><a class="btn block" onclick="showPest('Mosquitoes')">Tap for Info</a></div>
+    <div class="pestCard"><h3>Spiders</h3><p>Porches, eaves, sheds, webbing areas.</p><a class="btn block" onclick="showPest('Spiders')">Tap for Info</a></div>
+  </div>
+</section>
+
+<section id="mosquito">
+  <div class="sectionHead">
+    <h2>Mosquito Yard Treatments</h2>
+    <p class="hint">Comfort-focused outdoor approach</p>
+  </div>
+
+  <div class="grid2">
+    <div class="card serviceCard">
+      <h3>What We Focus On</h3>
+      <ul>
+        <li>Shaded resting zones</li>
+        <li>High-activity areas (patios, play spaces)</li>
+        <li>Standing water reduction</li>
+        <li>Seasonal follow-ups</li>
+      </ul>
+    </div>
+
+    <div class="card serviceCard">
+      <h3>Book Service</h3>
+      <p>Text your address, lot size, and problem areas.</p>
+      <a class="btn warn" href="#quote">$49 Special</a>
+      <a class="btn ghost" href="#" onclick="openSMS()">Text Now</a>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="sectionHead">
+    <h2>How It Works</h2>
+    <p class="hint">Simple & fast</p>
+  </div>
+
+  <div class="grid2">
+    <div class="card serviceCard">
+      <h3>1) Tell Us What’s Going On</h3>
+      <p>Send your address or ZIP, lot size, and pest.</p>
+    </div>
+    <div class="card serviceCard">
+      <h3>2) We Confirm the Plan</h3>
+      <p>We confirm scope, schedule, and what to expect.</p>
+    </div>
+  </div>
+</section>
+
+<section id="quote">
+  <div class="sectionHead">
+    <h2>Request a Quote</h2>
+    <p class="hint">Text or call — fast response</p>
+  </div>
+
+  <div class="card serviceCard">
+    <p><b>Phone:</b> (859) 325-6810<br>
+       <b>Email:</b> mann.dustin@yahoo.com<br>
+       <b>Service Area:</b> Lancaster + Central Kentucky routes
+    </p>
+
+    <a class="btn primary" href="tel:+18593256810">Call Now</a>
+    <a class="btn ghost" href="#" onclick="openSMS()">Text Quote</a>
+
+    <div class="legalBox">
+      KY Category 03 licensed. Outdoor turf/lawn/ornamental treatments only.
+      No indoor or structural pest control. Label-directed applications.
+      <br>
+      <a href="https://www.kyagr-apps.com/AgLicensing/Pesticides/Public/Company/48777" target="_blank">
+        Verify KDA License Listing
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>Dustin’s Pest Control LLC</b><br>
+    Central Kentucky • Outdoor Yard Services<br>
+    Phone: (859) 325-6810 • Email: mann.dustin@yahoo.com<br>
+    <a href="https://www.kyagr-apps.com/AgLicensing/Pesticides/Public/Company/48777" target="_blank">
+      Verify KDA License
+    </a>
+  </div>
+</footer>
+
+<div class="stickyBar">
+  <div class="stickyInner">
+    <a class="btn primary" href="tel:+18593256810">Call</a>
+    <a class="btn ghost" href="#" onclick="openSMS()">Text</a>
+    <a class="btn warn" href="#deal">$49 Special</a>
+  </div>
+</div>
+
+<div class="modalBack" id="modal">
+  <div class="modal">
+    <button class="iconBtn" onclick="closeModal()">Close</button>
+    <h3 id="modalTitle"></h3>
+    <p id="modalText"></p>
+    <a class="btn primary" href="tel:+18593256810">Call Now</a>
+    <a class="btn ghost" href="#" onclick="openSMS()">Text Details</a>
+  </div>
+</div>
+
+<script>
+const PHONE = "+18593256810";
+
+function openSMS(){
+  const msg = encodeURIComponent(
+`Dustin’s Pest Control – Quote Request
+
+Address or ZIP:
+Lot size:
+Pest(s):
+Problem area:
+Pets (yes/no):
+
+You can reply with photos.`
+  );
+  window.location.href = `sms:${PHONE}?&body=${msg}`;
+}
+
+const pestInfo = {
+  "Ants":"Trails, patios, mulch edges, mound areas. Keep food sources and standing water reduced.",
+  "Fleas":"Shaded turf, pet zones, under decks. Treat pets and yard together.",
+  "Ticks":"Fence lines, woods edges, tall grass. Trim edges and reduce brush.",
+  "Mosquitoes":"Shaded resting zones, standing water. Dump water weekly.",
+  "Spiders":"Porches, eaves, sheds. Reduce webbing and night lighting.",
+  "More Pests":"Grubs, chinch bugs, aphids, caterpillars, mites, and other lawn/ornamental pests."
+};
+
+function showPest(name){
+  document.getElementById("modalTitle").innerText = name;
+  document.getElementById("modalText").innerText = pestInfo[name] || "";
+  document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal(){
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
