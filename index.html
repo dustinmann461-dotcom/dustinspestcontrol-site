@@ -1,15 +1,8 @@
 <!doctype html>
+
 <html lang="en">
-<head>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<title>Dustin’s Pest Control LLC | Central Kentucky Yard Pest Control</title>
-
-<meta name="description" content="Mosquito, tick, flea and yard pest control across Central Kentucky including Lancaster, Richmond and Danville.">
-
-<style>
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Mosquito Control Lancaster KY | Dustin’s Pest Control</title><meta name="description" content="Mosquito control, tick treatment and yard pest control in Lancaster, Richmond and Danville KY. Fast quotes by call or text."><style>
 
 :root{
 --bg:#061018;
@@ -68,11 +61,21 @@ gap:10px;
 }
 
 .brand img{
-height:120px;
+height:160px;
 }
 
-.brand span{
-font-size:13px;
+/* HERO */
+
+.hero{
+padding:30px 0;
+}
+
+.h1{
+font-size:38px;
+margin:0 0 10px;
+}
+
+.lead{
 color:var(--muted);
 }
 
@@ -107,23 +110,34 @@ flex-wrap:wrap;
 margin-top:14px;
 }
 
-/* HERO */
+/* SECTIONS */
 
-.hero{
-padding:30px 0;
+section{
+margin-top:40px;
 }
 
-.h1{
-font-size:36px;
-margin:0 0 10px;
+h2{
+margin-bottom:10px;
 }
 
-.lead{
-color:var(--muted);
-font-size:15px;
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:16px;
+margin-top:14px;
 }
 
-/* TAP A PEST */
+.service{
+background:rgba(255,255,255,.05);
+border:1px solid var(--border);
+border-radius:14px;
+padding:20px;
+text-align:center;
+}
+
+/* TAP PEST */
 
 .pest-grid{
 display:grid;
@@ -141,15 +155,22 @@ text-align:center;
 cursor:pointer;
 font-size:22px;
 font-weight:700;
-display:flex;
-flex-direction:column;
-gap:6px;
-transition:.2s;
 }
 
-.pest:hover{
-background:rgba(255,255,255,.08);
-transform:translateY(-3px);
+/* FEATURES */
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:12px;
+margin-top:12px;
+}
+
+.feature{
+background:rgba(255,255,255,.05);
+padding:14px;
+border-radius:12px;
+border:1px solid var(--border);
 }
 
 /* PRICING */
@@ -158,7 +179,6 @@ transform:translateY(-3px);
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:12px;
-margin-top:16px;
 }
 
 .price{
@@ -180,7 +200,6 @@ color:#f59e0b;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
 gap:10px;
-margin-top:12px;
 }
 
 .area div{
@@ -190,12 +209,24 @@ padding:10px;
 text-align:center;
 }
 
+/* REVIEWS */
+
+.reviews{
+display:grid;
+gap:12px;
+}
+
+.review{
+background:rgba(255,255,255,.05);
+padding:14px;
+border-radius:12px;
+}
+
 /* FORM */
 
 form{
 display:grid;
 gap:10px;
-margin-top:12px;
 }
 
 input,textarea,select{
@@ -213,14 +244,14 @@ width:100%;
 height:350px;
 border:0;
 border-radius:12px;
-margin-top:10px;
 }
 
 /* FOOTER */
 
 footer{
-padding:30px 0 80px;
-font-size:12px;
+margin-top:40px;
+padding-bottom:80px;
+font-size:13px;
 color:var(--muted);
 }
 
@@ -244,206 +275,72 @@ max-width:var(--max);
 margin:auto;
 }
 
-</style>
-
-</head>
-
-<body>
-
-<header>
-<div class="wrap header-inner">
-
-<div class="brand">
-
+</style></head><body><header>
+<div class="wrap header-inner"><div class="brand">
 <img src="file_00000000a858722f8ee2ba76f351c735.png">
-
 <div>
 <strong>Dustin’s Pest Control LLC</strong><br>
-<span>Central Kentucky Outdoor Pest Control</span>
+Central Kentucky Outdoor Pest Control
 </div>
-
-</div>
-
-</div>
-</header>
-
-
-<main class="wrap">
-
-<section class="hero">
-
-<h1 class="h1">
-Mosquito & Yard Pest Control
-</h1>
-
-<p class="lead">
-Serving Lancaster, Richmond, Danville and surrounding Central Kentucky areas.
-</p>
-
-<div class="cta-row">
-
-<a class="btn green" href="tel:8593256810">Call</a>
+</div></div>
+</header><main class="wrap"><section class="hero"><h1 class="h1">
+Mosquito Control & Yard Pest Treatment in Lancaster KY
+</h1><p class="lead">
+Licensed Kentucky Category 03 Applicator • Outdoor lawn & ornamental pest treatments • Serving Central Kentucky
+</p><div class="cta-row"><a class="btn green" href="tel:8593256810">Call</a>
 
 <a class="btn" href="sms:8593256810">Text Quote</a>
 
-<a class="btn gold" href="#pricing">$49 Mosquito Special</a>
+<a class="btn gold">$49 New Customer Mosquito Special</a>
 
-</div>
-
-</section>
-
-
-<section>
-
-<h2>Tap a Pest</h2>
-
-<div class="pest-grid">
-
-<div class="pest" onclick="pest('mosquito')">
-🦟
-Mosquitoes
-</div>
-
-<div class="pest" onclick="pest('ticks')">
-🕷
-Ticks
-</div>
-
-<div class="pest" onclick="pest('fleas')">
-🐜
-Fleas
-</div>
-
-<div class="pest" onclick="pest('ants')">
-🐜
-Ants
-</div>
-
-<div class="pest" onclick="pest('spiders')">
-🕷
-Spiders
-</div>
-
-<div class="pest" onclick="pest('other')">
-🐞
-More
-</div>
-
-</div>
-
-</section>
-
-
-<section id="pricing">
-
-<h2>Typical Pricing</h2>
-
-<div class="pricing">
-
-<div class="price">
+</div><p style="margin-top:8px;font-size:13px;color:#9fb2bf;">
+New customers • First service only • Up to 1/4 acre
+</p></section><section><h2>Popular Pest Control Services</h2><div class="services"><div class="service">🦟 Mosquito Control</div>
+<div class="service">🕷 Tick Treatment</div>
+<div class="service">🐜 Ant Control</div>
+<div class="service">🐞 Lawn Pest Control</div></div></section><section><h2>Tap a Pest</h2><div class="pest-grid"><div class="pest" onclick="pest('mosquito')">🦟 Mosquitoes</div>
+<div class="pest" onclick="pest('ticks')">🕷 Ticks</div>
+<div class="pest" onclick="pest('fleas')">🐜 Fleas</div>
+<div class="pest" onclick="pest('ants')">🐜 Ants</div>
+<div class="pest" onclick="pest('spiders')">🕷 Spiders</div>
+<div class="pest" onclick="pest('other')">🐞 More</div></div></section><section><h2>Why Choose Dustin’s Pest Control</h2><div class="features"><div class="feature">✔ Locally owned Central Kentucky pest control</div>
+<div class="feature">✔ Kentucky licensed Category 03 applicator</div>
+<div class="feature">✔ Outdoor lawn & ornamental pest treatments</div>
+<div class="feature">✔ Fast quotes by call or text</div>
+<div class="feature">✔ Affordable mosquito treatments</div>
+<div class="feature">✔ Serving Lancaster, Richmond & Danville</div></div></section><section><h2>Typical Pricing</h2><div class="pricing"><div class="price">
 <h3>Small Yard</h3>
 <strong>$49-$79</strong>
 <p>Up to 1/4 acre</p>
-</div>
-
-<div class="price">
+</div><div class="price">
 <h3>Medium Yard</h3>
 <strong>$79-$109</strong>
 <p>1/4-1/2 acre</p>
-</div>
-
-<div class="price">
+</div><div class="price">
 <h3>Large Yard</h3>
 <strong>$109-$149</strong>
 <p>1/2-1 acre</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section>
-
-<h2>Service Area</h2>
-
-<div class="area">
-
-<div>Lancaster</div>
-<div>Richmond</div>
-<div>Danville</div>
-<div>Nicholasville</div>
-<div>Harrodsburg</div>
-<div>Berea</div>
-
-</div>
-
-</section>
-
-
-<section class="map">
-
-<h2>Service Area Map</h2>
-
-<iframe src="https://www.google.com/maps?q=Lancaster,Kentucky&output=embed"></iframe>
-
-</section>
-
-
-<section>
-
-<h2>Request Quote</h2>
-
-<form action="mailto:mann.dustin@yahoo.com" method="post" enctype="text/plain">
-
-<input name="name" placeholder="Name">
-
-<input name="city" placeholder="City">
-
-<select name="pest">
-
+</div></div></section><section><h2>Service Area</h2><div class="area"><div>Lancaster KY</div>
+<div>Richmond KY</div>
+<div>Danville KY</div>
+<div>Nicholasville KY</div>
+<div>Harrodsburg KY</div>
+<div>Berea KY</div></div></section><section class="map"><h2>Service Area Map</h2><iframe src="https://www.google.com/maps?q=Lancaster,Kentucky&output=embed"></iframe></section><section><h2>Request Quote</h2><form action="mailto:mann.dustin@yahoo.com" method="post" enctype="text/plain"><input name="name" placeholder="Name"><input name="city" placeholder="City"><select name="pest">
 <option>Mosquitoes</option>
 <option>Ticks</option>
 <option>Fleas</option>
 <option>Ants</option>
+</select><textarea name="notes" placeholder="Describe issue"></textarea><button class="btn green">Send Quote</button>
 
-</select>
-
-<textarea name="notes" placeholder="Describe issue"></textarea>
-
-<button class="btn green">Send Quote</button>
-
-</form>
-
-</section>
-
-<footer>
-
-<b>Dustin’s Pest Control LLC</b><br>
+</form></section><footer><b>Dustin’s Pest Control LLC</b><br>
 Central Kentucky Outdoor Pest Control<br>
 Phone: (859) 325-6810
 
-</footer>
-
-</main>
-
-
-<div class="sticky">
-
-<div class="sticky-bar">
-
-<a class="btn green" href="tel:8593256810">Call</a>
-
+</footer></main><div class="sticky"><div class="sticky-bar"><a class="btn green" href="tel:8593256810">Call</a>
 <a class="btn" href="sms:8593256810">Text</a>
+<a class="btn gold">$49</a>
 
-<a class="btn gold" href="#pricing">$49</a>
-
-</div>
-
-</div>
-
-
-<script>
+</div></div><script>
 
 function pest(p){
 
@@ -459,7 +356,7 @@ if(p==="fleas")
 text="Fleas thrive in shaded yard areas where pets or wildlife rest.";
 
 if(p==="ants")
-text="Outdoor ants build colonies in soil, mulch and near sidewalks.";
+text="Outdoor ants build colonies in soil and mulch.";
 
 if(p==="spiders")
 text="Spiders gather around outdoor lights and sheltered areas.";
@@ -471,7 +368,5 @@ alert(text);
 
 }
 
-</script>
-
-</body>
+</script></body>
 </html>
