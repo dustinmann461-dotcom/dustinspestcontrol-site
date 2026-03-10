@@ -1,392 +1,989 @@
 <!doctype html>
-
 <html lang="en">
-<head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>Mosquito Control Lancaster KY | Dustin’s Pest Control</title><meta name="description" content="Mosquito control, tick treatment and yard pest control in Lancaster, Richmond and Danville KY. Call or text Dustin’s Pest Control for a fast quote."><style>
-
-:root{
---bg:#061018;
---bg2:#071a22;
---text:#eaf2f7;
---muted:#9fb2bf;
---border:rgba(255,255,255,.12);
---green:#16a34a;
---gold:#f59e0b;
---radius:16px;
---max:1100px;
-}
-
-*{box-sizing:border-box}
-
-body{
-margin:0;
-font-family:system-ui,Segoe UI,Roboto,Arial;
-color:var(--text);
-
-background:
-radial-gradient(900px 500px at 20% 0%, rgba(22,163,74,.22), transparent 60%),
-radial-gradient(800px 500px at 85% 15%, rgba(245,158,11,.18), transparent 60%),
-linear-gradient(180deg,var(--bg2),var(--bg));
-}
-
-.wrap{
-max-width:var(--max);
-margin:auto;
-padding:0 16px;
-}
-
-a{text-decoration:none;color:inherit}
-
-/* HEADER */
-
-header{
-position:sticky;
-top:0;
-background:rgba(6,16,24,.9);
-border-bottom:1px solid var(--border);
-z-index:50;
-}
-
-.header-inner{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:10px 0;
-}
-
-.brand{
-display:flex;
-align-items:center;
-gap:12px;
-}
-
-.brand img{
-height:160px;
-}
-
-/* HERO */
-
-.hero{
-padding:30px 0;
-}
-
-.h1{
-font-size:38px;
-margin:0 0 10px;
-}
-
-.lead{
-color:var(--muted);
-}
-
-/* BUTTONS */
-
-.btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:12px 16px;
-border-radius:12px;
-border:1px solid var(--border);
-background:rgba(255,255,255,.07);
-font-weight:700;
-cursor:pointer;
-}
-
-.btn.green{
-background:linear-gradient(180deg,#16a34a,#12803c);
-}
-
-.btn.gold{
-background:linear-gradient(180deg,#f59e0b,#d97706);
-color:#1b1404;
-font-weight:900;
-}
-
-.cta-row{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-margin-top:14px;
-}
-
-/* SPECIAL OFFER */
-
-.highlight{
-background:rgba(255,255,255,.05);
-border:1px solid var(--border);
-border-radius:16px;
-padding:24px;
-margin-top:20px;
-text-align:center;
-}
-
-.highlight h2{
-margin:0 0 8px;
-color:#f59e0b;
-}
-
-/* SECTIONS */
-
-section{
-margin-top:40px;
-}
-
-h2{
-margin-bottom:10px;
-}
-
-/* SERVICES */
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:16px;
-margin-top:14px;
-}
-
-.service{
-background:rgba(255,255,255,.05);
-border:1px solid var(--border);
-border-radius:14px;
-padding:20px;
-text-align:center;
-}
-
-/* TAP PEST */
-
-.pest-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-gap:12px;
-margin-top:16px;
-}
-
-.pest{
-background:rgba(255,255,255,.05);
-border:1px solid var(--border);
-border-radius:14px;
-padding:20px;
-text-align:center;
-cursor:pointer;
-font-size:22px;
-font-weight:700;
-}
-
-/* FEATURES */
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:12px;
-margin-top:12px;
-}
-
-.feature{
-background:rgba(255,255,255,.05);
-padding:14px;
-border-radius:12px;
-border:1px solid var(--border);
-}
-
-/* PRICING */
-
-.pricing{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:12px;
-}
-
-.price{
-background:rgba(255,255,255,.05);
-border:1px solid var(--border);
-border-radius:14px;
-padding:16px;
-text-align:center;
-}
-
-.price strong{
-font-size:24px;
-color:#f59e0b;
-}
-
-/* SERVICE AREA */
-
-.area{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-gap:10px;
-}
-
-.area div{
-background:rgba(255,255,255,.05);
-border-radius:10px;
-padding:10px;
-text-align:center;
-}
-
-/* REVIEWS */
-
-.reviews{
-display:grid;
-gap:12px;
-}
-
-.review{
-background:rgba(255,255,255,.05);
-padding:16px;
-border-radius:12px;
-border:1px solid var(--border);
-}
-
-/* FORM */
-
-form{
-display:grid;
-gap:10px;
-}
-
-input,textarea,select{
-padding:12px;
-border-radius:10px;
-border:1px solid var(--border);
-background:#0c1c25;
-color:white;
-}
-
-/* MAP */
-
-.map iframe{
-width:100%;
-height:350px;
-border:0;
-border-radius:12px;
-}
-
-/* FOOTER */
-
-footer{
-margin-top:40px;
-padding-bottom:80px;
-font-size:13px;
-color:var(--muted);
-}
-
-/* STICKY BAR */
-
-.sticky{
-position:fixed;
-bottom:0;
-left:0;
-right:0;
-background:#061018;
-border-top:1px solid var(--border);
-padding:10px;
-}
-
-.sticky-bar{
-display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:8px;
-max-width:var(--max);
-margin:auto;
-}
-
-</style></head><body><header>
-<div class="wrap header-inner"><div class="brand">
-<img src="file_00000000a858722f8ee2ba76f351c735.png">
-<div>
-<strong>Dustin’s Pest Control LLC</strong><br>
-Central Kentucky Outdoor Pest Control
-</div>
-</div></div>
-</header><main class="wrap"><section class="hero"><h1 class="h1">
-Mosquito Control & Yard Pest Treatment in Lancaster KY
-</h1><p class="lead">
-Licensed Kentucky Category 03 Applicator • Outdoor lawn & ornamental pest treatments • Serving Central Kentucky
-</p><div class="cta-row"><a class="btn green" href="tel:8593256810">Call</a>
-
-<a class="btn" href="sms:8593256810">Text Quote</a>
-
-</div><div class="highlight"><h2>$49 New Customer Mosquito Treatment</h2><p>
-First mosquito yard treatment for <strong>$49</strong>.  
-New customers • First service only • Up to 1/4 acre.
-</p><div class="cta-row"><a class="btn green" href="tel:8593256810">Call</a>
-
-<a class="btn" href="sms:8593256810">Text to Claim Offer</a>
-
-</div></div></section><section><h2>Popular Pest Control Services</h2><div class="services"><div class="service">🦟 Mosquito Control</div>
-<div class="service">🕷 Tick Treatment</div>
-<div class="service">🐜 Ant Control</div>
-<div class="service">🐞 Lawn Pest Control</div></div></section><section><h2>Tap a Pest</h2><div class="pest-grid"><div class="pest" onclick="pest('mosquito')">🦟 Mosquitoes</div>
-<div class="pest" onclick="pest('ticks')">🕷 Ticks</div>
-<div class="pest" onclick="pest('fleas')">🐜 Fleas</div>
-<div class="pest" onclick="pest('ants')">🐜 Ants</div>
-<div class="pest" onclick="pest('spiders')">🕷 Spiders</div>
-<div class="pest" onclick="pest('other')">🐞 More</div></div></section><section><h2>Why Choose Dustin’s Pest Control</h2><div class="features"><div class="feature">✔ Locally owned Central Kentucky pest control</div>
-<div class="feature">✔ Kentucky licensed Category 03 applicator</div>
-<div class="feature">✔ Outdoor lawn & ornamental pest treatments</div>
-<div class="feature">✔ Fast quotes by call or text</div>
-<div class="feature">✔ Affordable mosquito treatments</div>
-<div class="feature">✔ Serving Lancaster, Richmond & Danville</div></div></section><section><h2>Service Area</h2><div class="area"><div>Lancaster KY</div>
-<div>Richmond KY</div>
-<div>Danville KY</div>
-<div>Nicholasville KY</div>
-<div>Harrodsburg KY</div>
-<div>Berea KY</div></div></section><section><h2>Customer Reviews</h2><div class="reviews"><div class="review">
-⭐ ⭐ ⭐ ⭐ ⭐  
-“Fast service and very affordable. Mosquitoes were gone.”  
-— Richmond KY
-</div><div class="review">
-⭐ ⭐ ⭐ ⭐ ⭐  
-“Very professional and easy to work with.”  
-— Lancaster KY
-</div><div class="review">
-⭐ ⭐ ⭐ ⭐ ⭐  
-“Quick response and great communication. Highly recommend.”  
-— Danville KY
-</div></div></section><section class="map"><h2>Service Area Map</h2><iframe src="https://www.google.com/maps?q=Lancaster,Kentucky&output=embed"></iframe></section><section><h2>Request Quote</h2><form action="mailto:mann.dustin@yahoo.com" method="post" enctype="text/plain"><input name="name" placeholder="Name"><input name="city" placeholder="City"><select name="pest">
-<option>Mosquitoes</option>
-<option>Ticks</option>
-<option>Fleas</option>
-<option>Ants</option>
-</select><textarea name="notes" placeholder="Describe issue"></textarea><button class="btn green">Send Quote</button>
-
-</form></section><footer><b>Dustin’s Pest Control LLC</b><br>
-Central Kentucky Outdoor Pest Control<br>
-Phone: (859) 325-6810
-
-</footer></main><div class="sticky"><div class="sticky-bar"><a class="btn green" href="tel:8593256810">Call</a>
-<a class="btn" href="sms:8593256810">Text</a>
-<a class="btn gold">$49</a>
-
-</div></div><script>
-
-function pest(p){
-
-let text="";
-
-if(p==="mosquito")
-text="Mosquitoes breed in standing water and rest in shaded vegetation.";
-
-if(p==="ticks")
-text="Ticks are commonly found near woods edges and tall grass.";
-
-if(p==="fleas")
-text="Fleas thrive in shaded yard areas where pets or wildlife rest.";
-
-if(p==="ants")
-text="Outdoor ants build colonies in soil and mulch.";
-
-if(p==="spiders")
-text="Spiders gather around outdoor lights and sheltered areas.";
-
-if(p==="other")
-text="We treat a variety of outdoor turf and ornamental pests.";
-
-alert(text);
-
-}
-
-</script></body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mosquito Control Lancaster KY | Dustin’s Pest Control LLC</title>
+  <meta name="description" content="Mosquito control, tick treatment, flea treatment, ant control, and yard pest treatment in Lancaster, Richmond, Danville, Nicholasville, Harrodsburg, and surrounding Central Kentucky areas. Call or text Dustin’s Pest Control for a fast quote.">
+
+  <style>
+    :root{
+      --bg:#061018;
+      --bg2:#071a22;
+      --panel:rgba(255,255,255,.05);
+      --panel2:rgba(255,255,255,.08);
+      --text:#eaf2f7;
+      --muted:#a9b8c3;
+      --border:rgba(255,255,255,.12);
+      --green:#16a34a;
+      --green2:#12803c;
+      --gold:#f59e0b;
+      --gold2:#d97706;
+      --shadow:0 16px 40px rgba(0,0,0,.35);
+      --radius:18px;
+      --radius2:22px;
+      --max:1160px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 20% 0%, rgba(22,163,74,.22), transparent 60%),
+        radial-gradient(850px 520px at 85% 12%, rgba(245,158,11,.18), transparent 60%),
+        linear-gradient(180deg,var(--bg2),var(--bg));
+      overflow-x:hidden;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:90;
+      background:linear-gradient(180deg,rgba(6,16,24,.94),rgba(6,16,24,.78));
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:10px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
+
+    .brand img{
+      height:185px;
+      width:auto;
+      filter:drop-shadow(0 14px 24px rgba(0,0,0,.45));
+      flex:none;
+    }
+
+    .brand-copy{
+      min-width:0;
+      line-height:1.15;
+    }
+
+    .brand-copy strong{
+      display:block;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+
+    .brand-copy span{
+      display:block;
+      margin-top:4px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .top-actions{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .chip,.btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      border-radius:14px;
+      padding:12px 16px;
+      font-weight:800;
+      cursor:pointer;
+      transition:.18s ease;
+      box-shadow:none;
+      text-align:center;
+    }
+
+    .chip{
+      padding:10px 12px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .chip:hover,.btn:hover{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,.09);
+    }
+
+    .btn.green,.chip.green{
+      background:linear-gradient(180deg,var(--green),var(--green2));
+      border-color:rgba(22,163,74,.55);
+    }
+
+    .btn.gold,.chip.gold{
+      background:linear-gradient(180deg,var(--gold),var(--gold2));
+      border-color:rgba(245,158,11,.55);
+      color:#1b1404;
+    }
+
+    .btn.small{
+      padding:10px 12px;
+      font-size:13px;
+      border-radius:12px;
+    }
+
+    .hero{
+      padding:22px 0 8px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.28fr .92fr;
+      gap:14px;
+      align-items:stretch;
+    }
+
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.035));
+      border:1px solid var(--border);
+      border-radius:var(--radius2);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .card-pad{padding:20px}
+
+    .h1{
+      margin:0 0 10px;
+      font-size:42px;
+      line-height:1.03;
+      letter-spacing:-.5px;
+    }
+
+    .lead{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.55;
+    }
+
+    .cta-row{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:14px;
+    }
+
+    .mini{
+      color:var(--muted);
+      font-size:12.5px;
+      line-height:1.5;
+    }
+
+    .trustbar{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:10px;
+      margin-top:16px;
+    }
+
+    .trustbar div{
+      background:rgba(255,255,255,.05);
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:12px;
+      text-align:center;
+      font-size:13px;
+      color:var(--text);
+    }
+
+    .highlight{
+      margin-top:16px;
+      background:linear-gradient(180deg,rgba(245,158,11,.18),rgba(245,158,11,.08));
+      border:1px solid rgba(245,158,11,.35);
+      border-radius:18px;
+      padding:20px;
+      box-shadow:var(--shadow);
+    }
+
+    .highlight h2{
+      margin:0 0 8px;
+      color:#ffd37a;
+      font-size:26px;
+      line-height:1.1;
+    }
+
+    .highlight p{
+      margin:0;
+      line-height:1.55;
+    }
+
+    section{
+      padding:14px 0;
+    }
+
+    h2{
+      margin:0 0 12px;
+      font-size:24px;
+      letter-spacing:.1px;
+    }
+
+    h3{
+      margin:0 0 8px;
+      font-size:18px;
+    }
+
+    .services,
+    .features,
+    .pricing,
+    .area,
+    .steps,
+    .faq-grid{
+      display:grid;
+      gap:12px;
+    }
+
+    .services{grid-template-columns:repeat(4,1fr)}
+    .features{grid-template-columns:repeat(3,1fr)}
+    .pricing{grid-template-columns:repeat(3,1fr)}
+    .area{grid-template-columns:repeat(3,1fr)}
+    .steps{grid-template-columns:repeat(4,1fr)}
+    .faq-grid{grid-template-columns:repeat(2,1fr)}
+
+    .service,.feature,.price,.area div,.step,.faq-item,.review{
+      background:rgba(255,255,255,.05);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+    }
+
+    .service{
+      text-align:center;
+    }
+
+    .service .icon{
+      font-size:34px;
+      line-height:1;
+      margin-bottom:10px;
+    }
+
+    .service p,
+    .feature,
+    .step p,
+    .faq-item p,
+    .review p{
+      color:var(--muted);
+      line-height:1.55;
+      margin:0;
+      font-size:14px;
+    }
+
+    .feature{
+      color:var(--text);
+      font-size:14px;
+    }
+
+    .price{
+      text-align:center;
+    }
+
+    .price strong{
+      display:block;
+      margin:8px 0 6px;
+      color:#ffd37a;
+      font-size:30px;
+      line-height:1;
+    }
+
+    .pest-grid{
+      display:grid;
+      grid-template-columns:repeat(6,1fr);
+      gap:12px;
+      margin-top:12px;
+    }
+
+    .pest{
+      background:rgba(255,255,255,.05);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px 12px;
+      text-align:center;
+      cursor:pointer;
+      font-size:22px;
+      font-weight:800;
+      transition:.18s ease;
+      min-height:116px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+    }
+
+    .pest span{
+      font-size:15px;
+      line-height:1.2;
+    }
+
+    .pest:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.08);
+    }
+
+    .reviews{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+
+    .review .stars{
+      display:block;
+      font-size:18px;
+      margin-bottom:8px;
+      color:#ffd37a;
+    }
+
+    .review b{
+      display:block;
+      margin-top:10px;
+      font-size:14px;
+    }
+
+    .map iframe{
+      width:100%;
+      height:360px;
+      border:0;
+      border-radius:18px;
+      display:block;
+    }
+
+    form{
+      display:grid;
+      gap:10px;
+    }
+
+    input,textarea,select{
+      width:100%;
+      padding:13px 14px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(0,0,0,.25);
+      color:var(--text);
+      font:inherit;
+      outline:none;
+    }
+
+    textarea{
+      min-height:110px;
+      resize:vertical;
+    }
+
+    .quote-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .local-copy{
+      background:rgba(255,255,255,.05);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+      color:var(--muted);
+      line-height:1.65;
+    }
+
+    .faq-item h3{
+      margin-bottom:8px;
+      font-size:17px;
+    }
+
+    footer{
+      margin-top:20px;
+      padding:22px 0 92px;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    .sticky{
+      position:fixed;
+      left:0;
+      right:0;
+      bottom:0;
+      z-index:95;
+      background:linear-gradient(180deg,rgba(6,16,24,.12),rgba(6,16,24,.94));
+      backdrop-filter:blur(10px);
+      border-top:1px solid var(--border);
+      padding:10px 10px calc(10px + env(safe-area-inset-bottom));
+    }
+
+    .sticky-bar{
+      max-width:var(--max);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr 1fr;
+      gap:8px;
+    }
+
+    .sticky .btn{
+      padding:12px 10px;
+      border-radius:14px;
+      font-size:13px;
+    }
+
+    .modal-backdrop{
+      position:fixed;
+      inset:0;
+      z-index:200;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      background:rgba(0,0,0,.62);
+      padding:18px;
+    }
+
+    .modal{
+      width:min(700px,100%);
+      border-radius:22px;
+      border:1px solid var(--border);
+      background:linear-gradient(180deg,rgba(11,24,34,.98),rgba(6,16,24,.98));
+      box-shadow:0 24px 70px rgba(0,0,0,.55);
+      overflow:hidden;
+    }
+
+    .modal-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:14px 16px;
+      border-bottom:1px solid var(--border);
+    }
+
+    .modal-title{
+      font-size:20px;
+      font-weight:900;
+    }
+
+    .xbtn{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.05);
+      color:var(--text);
+      border-radius:12px;
+      padding:10px 12px;
+      cursor:pointer;
+      font-weight:900;
+    }
+
+    .modal-body{
+      padding:16px;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    .modal-body p{margin:0 0 10px}
+    .modal-body .k{color:var(--text);font-weight:800}
+
+    .modal-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      padding:16px;
+      border-top:1px solid var(--border);
+    }
+
+    @media (max-width: 1080px){
+      .services{grid-template-columns:repeat(2,1fr)}
+      .features{grid-template-columns:repeat(2,1fr)}
+      .steps{grid-template-columns:repeat(2,1fr)}
+      .pest-grid{grid-template-columns:repeat(3,1fr)}
+      .reviews{grid-template-columns:1fr}
+      .trustbar{grid-template-columns:repeat(2,1fr)}
+      .brand img{height:155px}
+    }
+
+    @media (max-width: 920px){
+      .hero-grid,
+      .quote-grid{
+        grid-template-columns:1fr;
+      }
+      .pricing,
+      .area,
+      .faq-grid{
+        grid-template-columns:1fr;
+      }
+      .header-inner{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      .top-actions{
+        width:100%;
+        justify-content:flex-start;
+      }
+    }
+
+    @media (max-width: 640px){
+      .brand img{height:138px}
+      .brand-copy strong{font-size:16px}
+      .brand-copy span{font-size:12px}
+      .h1{font-size:32px}
+      .services,
+      .features,
+      .steps,
+      .pest-grid{
+        grid-template-columns:1fr 1fr;
+      }
+      .trustbar{
+        grid-template-columns:1fr;
+      }
+      .sticky-bar{
+        grid-template-columns:1fr 1fr 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 420px){
+      .services,
+      .features,
+      .steps,
+      .pest-grid{
+        grid-template-columns:1fr;
+      }
+      .brand{
+        align-items:flex-start;
+      }
+      .brand img{height:126px}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Dustin’s Pest Control LLC",
+    "telephone":"+1-859-325-6810",
+    "email":"mann.dustin@yahoo.com",
+    "url":"https://dustinspestcontrol.com",
+    "image":"https://dustinspestcontrol.com/file_00000000a858722f8ee2ba76f351c735.png",
+    "priceRange":"$$",
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"Lancaster",
+      "addressRegion":"KY",
+      "addressCountry":"US"
+    },
+    "areaServed":[
+      "Lancaster KY",
+      "Richmond KY",
+      "Danville KY",
+      "Nicholasville KY",
+      "Harrodsburg KY",
+      "Berea KY",
+      "Garrard County KY",
+      "Madison County KY"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="wrap header-inner">
+      <div class="brand">
+        <img src="file_00000000a858722f8ee2ba76f351c735.png" alt="Dustin’s Pest Control LLC logo">
+        <div class="brand-copy">
+          <strong>Dustin’s Pest Control LLC</strong>
+          <span>Central Kentucky Outdoor Pest Control</span>
+          <span>Call or Text (859) 325-6810 for a fast quote</span>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <a class="chip" href="#services">Services</a>
+        <a class="chip" href="#tap">Tap a Pest</a>
+        <a class="chip" href="#reviews">Reviews</a>
+        <a class="chip gold" href="#special">$49 Special</a>
+        <a class="chip green" href="https://share.google/qHj3vIEVyt7z5IOP4" target="_blank" rel="noopener">Google Reviews</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="card">
+          <div class="card-pad">
+            <h1 class="h1">Mosquito Control & Yard Pest Treatment in Lancaster KY</h1>
+            <p class="lead">
+              Dustin’s Pest Control provides mosquito control, tick treatment, flea treatment, ant control, and lawn pest control across Central Kentucky including Lancaster, Richmond, Danville, Nicholasville, Harrodsburg, and Berea.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn green" href="tel:8593256810">Call (859) 325-6810</a>
+              <a class="btn" href="sms:8593256810?body=Hi%20Dustin%E2%80%99s%20Pest%20Control%20%E2%80%94%20I%E2%80%99d%20like%20a%20quote.%20City%3A%20_____%20Lot%20size%3A%20_____%20Issue%3A%20_____">Text for Fast Quote</a>
+              <a class="btn small" href="mailto:mann.dustin@yahoo.com?subject=Quote%20Request%20-%20Dustin%E2%80%99s%20Pest%20Control">Email</a>
+              <a class="btn small" href="https://share.google/qHj3vIEVyt7z5IOP4" target="_blank" rel="noopener">⭐ Read Our Google Reviews</a>
+            </div>
+
+            <div class="trustbar">
+              <div>✔ Kentucky Licensed Category 03</div>
+              <div>✔ Locally Owned</div>
+              <div>✔ Outdoor Treatments Only</div>
+              <div>✔ Fast Text Quotes</div>
+            </div>
+
+            <div class="highlight" id="special">
+              <h2>$49 New Customer Mosquito Treatment</h2>
+              <p>First mosquito yard treatment for <strong>$49</strong>. New customers only. First service only. Up to 1/4 acre. Larger properties priced accordingly.</p>
+              <div class="cta-row">
+                <a class="btn green" href="tel:8593256810">Call to Claim Offer</a>
+                <a class="btn" href="sms:8593256810?body=Hi%20Dustin%E2%80%99s%20Pest%20Control%20%E2%80%94%20I%E2%80%99d%20like%20the%20%2449%20new%20customer%20mosquito%20special.%20City%3A%20_____%20Lot%20size%3A%20_____">Text to Claim Offer</a>
+              </div>
+              <p class="mini" style="margin-top:10px">Licensed Kentucky Category 03 applicator. Outdoor lawn and ornamental treatments only. No indoor or structural pest control.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card">
+          <div class="card-pad">
+            <h2 style="font-size:22px;margin-bottom:10px">Why homeowners call us</h2>
+            <div class="features">
+              <div class="feature">Local owner-operated service in Central Kentucky.</div>
+              <div class="feature">Clear pricing and fast quotes by call or text.</div>
+              <div class="feature">Helpful pest guidance before and after service.</div>
+              <div class="feature">Focused yard treatments for mosquito, tick, flea, ant, and lawn pest issues.</div>
+              <div class="feature">Straightforward compliance language so customers know exactly what you do.</div>
+              <div class="feature">Mobile-friendly site built to make booking easy.</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Popular Pest Control Services</h2>
+      <div class="services">
+        <div class="service">
+          <div class="icon">🦟</div>
+          <h3>Mosquito Control</h3>
+          <p>Targeted yard treatments for shaded resting areas and mosquito pressure around patios, play areas, decks, and landscaping.</p>
+        </div>
+        <div class="service">
+          <div class="icon">🕷</div>
+          <h3>Tick Treatment</h3>
+          <p>Perimeter-focused service for yard edges, brush lines, and high-contact zones where ticks are commonly found.</p>
+        </div>
+        <div class="service">
+          <div class="icon">🐜</div>
+          <h3>Ant Control</h3>
+          <p>Outdoor ant treatments for soil, mulch beds, edges, and areas where trails and colonies are active.</p>
+        </div>
+        <div class="service">
+          <div class="icon">🐞</div>
+          <h3>Lawn Pest Control</h3>
+          <p>Outdoor turf and ornamental pest treatment tailored to the pest, site conditions, and product label directions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tap">
+      <h2>Tap a Pest</h2>
+      <div class="pest-grid">
+        <button class="pest" type="button" onclick="openPest('mosquito')">🦟 <span>Mosquitoes</span></button>
+        <button class="pest" type="button" onclick="openPest('ticks')">🕷 <span>Ticks</span></button>
+        <button class="pest" type="button" onclick="openPest('fleas')">🐜 <span>Fleas</span></button>
+        <button class="pest" type="button" onclick="openPest('ants')">🐜 <span>Ants</span></button>
+        <button class="pest" type="button" onclick="openPest('spiders')">🕸 <span>Spiders</span></button>
+        <button class="pest" type="button" onclick="openPest('other')">🐞 <span>More Pests</span></button>
+      </div>
+    </section>
+
+    <section>
+      <h2>How Our Pest Control Service Works</h2>
+      <div class="steps">
+        <div class="step">
+          <h3>1. Contact Us</h3>
+          <p>Call or text with your city, lot size, and what pest problem you’re dealing with.</p>
+        </div>
+        <div class="step">
+          <h3>2. Yard Review</h3>
+          <p>We identify likely pressure areas, treatment zones, and any conditions that affect service.</p>
+        </div>
+        <div class="step">
+          <h3>3. Targeted Treatment</h3>
+          <p>Applications are made to outdoor lawn and ornamental areas following label directions.</p>
+        </div>
+        <div class="step">
+          <h3>4. Enjoy Your Yard</h3>
+          <p>You get practical expectations, next steps, and follow-up guidance if needed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Typical Pricing</h2>
+      <div class="pricing">
+        <div class="price">
+          <h3>Small Yard</h3>
+          <strong>$49–$79</strong>
+          <p class="mini">Up to 1/4 acre</p>
+        </div>
+        <div class="price">
+          <h3>Medium Yard</h3>
+          <strong>$79–$109</strong>
+          <p class="mini">1/4 to 1/2 acre</p>
+        </div>
+        <div class="price">
+          <h3>Large Yard</h3>
+          <strong>$109–$149</strong>
+          <p class="mini">1/2 to 1 acre</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Service Area</h2>
+      <div class="area">
+        <div>Lancaster KY</div>
+        <div>Richmond KY</div>
+        <div>Danville KY</div>
+        <div>Nicholasville KY</div>
+        <div>Harrodsburg KY</div>
+        <div>Berea KY</div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <h2>Customer Reviews</h2>
+      <div class="reviews">
+        <div class="review">
+          <span class="stars">★★★★★</span>
+          <p>“Fast service and very affordable. Mosquitoes were gone and the yard was much more comfortable.”</p>
+          <b>— Richmond KY</b>
+        </div>
+        <div class="review">
+          <span class="stars">★★★★★</span>
+          <p>“Very professional and easy to work with. Quick response and clear communication.”</p>
+          <b>— Lancaster KY</b>
+        </div>
+        <div class="review">
+          <span class="stars">★★★★★</span>
+          <p>“Great experience from start to finish. Showed up on time and explained everything well.”</p>
+          <b>— Danville KY</b>
+        </div>
+      </div>
+      <div class="cta-row" style="margin-top:14px">
+        <a class="btn" href="https://share.google/qHj3vIEVyt7z5IOP4" target="_blank" rel="noopener">See Google Reviews</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Local Pest Control in Central Kentucky</h2>
+      <div class="local-copy">
+        Dustin’s Pest Control provides mosquito control, tick treatment, flea treatment, ant control, and yard pest control across Central Kentucky including Lancaster, Richmond, Danville, Nicholasville, Harrodsburg, Berea, Garrard County, and Madison County. If you’re dealing with mosquitoes, ticks, fleas, ants, spiders, or other outdoor pests in these areas, call or text for a fast quote.
+      </div>
+    </section>
+
+    <section class="map">
+      <h2>Service Area Map</h2>
+      <iframe src="https://www.google.com/maps?q=Dustin's+Pest+Control+Lancaster+KY&output=embed" loading="lazy" title="Dustin’s Pest Control map"></iframe>
+    </section>
+
+    <section>
+      <h2>Common Questions</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>How long does mosquito treatment last?</h3>
+          <p>Most treatments provide relief for around 3 to 4 weeks depending on weather, vegetation, and yard conditions.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is treatment safe for pets?</h3>
+          <p>Products are applied according to label directions. Follow any site-specific instructions provided after service and allow treated areas to dry before re-entry.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do you treat inside homes?</h3>
+          <p>No. Dustin’s Pest Control is focused on outdoor turf, lawn, and ornamental treatment scope only.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How do I get a quote?</h3>
+          <p>Call or text with your city, lot size, and pest issue. Text is often the fastest way to get started.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="highlight" style="text-align:left">
+        <h2>Ready to Enjoy Your Yard Again?</h2>
+        <p>Call or text Dustin’s Pest Control for fast mosquito and yard pest treatment quotes in Central Kentucky.</p>
+        <div class="cta-row">
+          <a class="btn green" href="tel:8593256810">Call (859) 325-6810</a>
+          <a class="btn" href="sms:8593256810?body=Hi%20Dustin%E2%80%99s%20Pest%20Control%20%E2%80%94%20I%E2%80%99d%20like%20a%20quote.%20City%3A%20_____%20Lot%20size%3A%20_____%20Issue%3A%20_____">Text for Fast Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="quote">
+      <h2>Request a Quote</h2>
+      <div class="quote-grid">
+        <div class="card">
+          <div class="card-pad">
+            <h3>Quick Contact</h3>
+            <p class="lead">Call, text, or email. Text is usually the fastest.</p>
+            <div class="cta-row">
+              <a class="btn green" href="tel:8593256810">Call</a>
+              <a class="btn" href="sms:8593256810?body=Hi%20Dustin%E2%80%99s%20Pest%20Control%20%E2%80%94%20I%E2%80%99d%20like%20a%20quote.%20City%3A%20_____%20Lot%20size%3A%20_____%20Issue%3A%20_____">Text</a>
+              <a class="btn" href="mailto:mann.dustin@yahoo.com?subject=Quote%20Request%20-%20Dustin%E2%80%99s%20Pest%20Control">Email</a>
+            </div>
+            <p class="mini" style="margin-top:14px">Licensed Kentucky Category 03 applicator. Outdoor lawn and ornamental pest treatments only.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-pad">
+            <h3>Send Details</h3>
+            <form action="mailto:mann.dustin@yahoo.com" method="post" enctype="text/plain">
+              <input name="name" placeholder="Name">
+              <input name="city" placeholder="City">
+              <select name="pest">
+                <option>Mosquitoes</option>
+                <option>Ticks</option>
+                <option>Fleas</option>
+                <option>Ants</option>
+                <option>Spiders</option>
+                <option>Other</option>
+              </select>
+              <textarea name="notes" placeholder="Describe the issue, lot size, and any details"></textarea>
+              <button class="btn green" type="submit">Send Quote Request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <b>Dustin’s Pest Control LLC</b><br>
+      Lancaster, Kentucky<br>
+      Phone: (859) 325-6810 • Email: mann.dustin@yahoo.com<br>
+      © 2026 Dustin’s Pest Control LLC
+    </footer>
+  </main>
+
+  <div class="sticky">
+    <div class="sticky-bar">
+      <a class="btn green" href="tel:8593256810">Call</a>
+      <a class="btn" href="sms:8593256810?body=Hi%20Dustin%E2%80%99s%20Pest%20Control%20%E2%80%94%20I%E2%80%99d%20like%20a%20quote.%20City%3A%20_____%20Lot%20size%3A%20_____%20Issue%3A%20_____">Text</a>
+      <a class="btn" href="#quote">Quote</a>
+      <a class="btn gold" href="#special">$49</a>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <div class="modal-head">
+        <div class="modal-title" id="modalTitle">Pest Info</div>
+        <button class="xbtn" type="button" onclick="closeModal()" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-actions">
+        <a class="btn green" href="tel:8593256810">Call</a>
+        <a class="btn" id="modalTextBtn" href="#">Text for Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const PHONE = "8593256810";
+
+    const PESTS = {
+      mosquito: {
+        title: "Mosquitoes",
+        body: `
+          <p><span class="k">Where they build up:</span> shaded vegetation, under decks, around fence lines, and anywhere standing water is nearby.</p>
+          <p><span class="k">What helps:</span> eliminate standing water in buckets, toys, tarps, gutters, tires, and other containers. Yard treatment works best along with source reduction.</p>
+          <p><span class="k">Service focus:</span> targeted outdoor mosquito treatment for resting and pressure areas around the yard.</p>
+        `
+      },
+      ticks: {
+        title: "Ticks",
+        body: `
+          <p><span class="k">Where they are common:</span> wooded edges, brush lines, tall grass, and transition zones around the yard.</p>
+          <p><span class="k">What helps:</span> trim grass, reduce leaf litter, and limit brush where pets and people make contact.</p>
+          <p><span class="k">Service focus:</span> targeted perimeter and high-contact treatment zones.</p>
+        `
+      },
+      fleas: {
+        title: "Fleas",
+        body: `
+          <p><span class="k">Where they build up:</span> shaded areas where pets or wildlife rest, under decks, around fence lines, and near pet activity zones.</p>
+          <p><span class="k">What helps:</span> outdoor service works best when combined with proper pet care and attention to shaded harborage areas.</p>
+          <p><span class="k">Service focus:</span> yard treatment in likely flea pressure zones.</p>
+        `
+      },
+      ants: {
+        title: "Ants",
+        body: `
+          <p><span class="k">Where they show up:</span> along sidewalks, patios, mulch beds, and landscape edges where trails and nests become active.</p>
+          <p><span class="k">What helps:</span> identifying trail direction and nest activity can make treatment more effective.</p>
+          <p><span class="k">Service focus:</span> outdoor ant trails, edges, and colony activity areas.</p>
+        `
+      },
+      spiders: {
+        title: "Spiders",
+        body: `
+          <p><span class="k">Where they gather:</span> sheltered corners, sheds, porches, eaves, and areas with high insect activity.</p>
+          <p><span class="k">What helps:</span> reducing insect pressure and webs can improve results around the exterior.</p>
+          <p><span class="k">Service focus:</span> outdoor harborage areas only.</p>
+        `
+      },
+      other: {
+        title: "More Outdoor Pests",
+        body: `
+          <p><span class="k">Additional issues:</span> turf and ornamental pests vary based on the season, site conditions, and target pest.</p>
+          <p><span class="k">Best next step:</span> call or text with the issue, city, and lot size for guidance.</p>
+          <p><span class="k">Service focus:</span> outdoor lawn and ornamental scope only.</p>
+        `
+      }
+    };
+
+    function openPest(key){
+      const item = PESTS[key];
+      if(!item) return;
+
+      document.getElementById("modalTitle").textContent = item.title;
+      document.getElementById("modalBody").innerHTML = item.body;
+      document.getElementById("modalTextBtn").href =
+        "sms:" + PHONE + "?body=" + encodeURIComponent("Hi Dustin’s Pest Control — I need help with " + item.title + ". City: _____ Lot size: _____ Details: _____");
+      document.getElementById("modalBackdrop").style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal(){
+      document.getElementById("modalBackdrop").style.display = "none";
+      document.body.style.overflow = "";
+    }
+
+    document.getElementById("modalBackdrop").addEventListener("click", function(e){
+      if(e.target.id === "modalBackdrop") closeModal();
+    });
+
+    document.addEventListener("keydown", function(e){
+      if(e.key === "Escape") closeModal();
+    });
+  </script>
+</body>
 </html>
