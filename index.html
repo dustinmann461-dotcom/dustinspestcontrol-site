@@ -417,31 +417,26 @@
       display:block;
     }
 
-    form{
-      display:grid;
-      gap:10px;
-    }
-
-    input,textarea,select{
-      width:100%;
-      padding:13px 14px;
-      border-radius:14px;
-      border:1px solid var(--border);
-      background:rgba(0,0,0,.25);
-      color:var(--text);
-      font:inherit;
-      outline:none;
-    }
-
-    textarea{
-      min-height:110px;
-      resize:vertical;
-    }
-
     .quote-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
+    }
+
+    .quote-list{
+      display:grid;
+      gap:10px;
+      margin-top:14px;
+    }
+
+    .quote-list div{
+      background:rgba(255,255,255,.05);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:12px 14px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.5;
     }
 
     .local-copy{
@@ -925,21 +920,21 @@
 
         <div class="card">
           <div class="card-pad">
-            <h3>Send Details</h3>
-            <form action="mailto:mann.dustin@yahoo.com" method="post" enctype="text/plain">
-              <input name="name" placeholder="Name">
-              <input name="city" placeholder="City">
-              <select name="service">
-                <option>ULV Mosquito Fogging – $50</option>
-                <option>Mosquito Barrier Treatment – $75</option>
-                <option>Premium Mosquito Treatment – $115</option>
-                <option>Flea & Tick Lawn Treatment – $125</option>
-                <option>Full Yard Pest Protection – $150</option>
-                <option>Pre-Emergent & Broadleaf Weed Control – $75</option>
-              </select>
-              <textarea name="notes" placeholder="Describe the issue, lot size, and any details"></textarea>
-              <button class="btn green" type="submit">Send Quote Request</button>
-            </form>
+            <h3>Fastest Way to Get a Quote</h3>
+            <p class="lead">Text the details below and we can usually point you to the right service fast.</p>
+
+            <div class="quote-list">
+              <div><strong>City:</strong> Lancaster / Richmond / Danville / Nicholasville / Harrodsburg / Berea</div>
+              <div><strong>Lot size:</strong> 1/4 acre, 1/2 acre, 1 acre, or estimate</div>
+              <div><strong>Service needed:</strong> Mosquitoes, flea & tick, weed control, or full yard protection</div>
+              <div><strong>Problem details:</strong> backyard issue, pets, heavy pressure areas, event coming up, etc.</div>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn green" href="sms:8593256810?body=Hi%20Dustin%E2%80%99s%20Pest%20Control%20%E2%80%94%20I%E2%80%99d%20like%20a%20quote.%20City%3A%20_____%20Lot%20size%3A%20_____%20Service%3A%20_____%20Details%3A%20_____">Text Your Quote Request</a>
+            </div>
+
+            <p class="mini" style="margin-top:14px">Most quotes only take a couple minutes by text.</p>
           </div>
         </div>
       </div>
